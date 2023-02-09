@@ -13,6 +13,8 @@
 		D363A72A29959D8E00E48105 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D363A72929959D8E00E48105 /* Preview Assets.xcassets */; };
 		D363A72C29959D8E00E48105 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D363A72B29959D8E00E48105 /* Persistence.swift */; };
 		D363A72F29959D8E00E48105 /* Perfil_Salud_NFC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D363A72D29959D8E00E48105 /* Perfil_Salud_NFC.xcdatamodeld */; };
+		D363A7372995A80600E48105 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D363A7362995A80600E48105 /* ProfileView.swift */; };
+		D363A7392995A81500E48105 /* NFCReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D363A7382995A81500E48105 /* NFCReaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		D363A72929959D8E00E48105 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D363A72B29959D8E00E48105 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		D363A72E29959D8E00E48105 /* Perfil_Salud_NFC.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Perfil_Salud_NFC.xcdatamodel; sourceTree = "<group>"; };
+		D363A7362995A80600E48105 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		D363A7382995A81500E48105 /* NFCReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCReaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				D363A72229959D8D00E48105 /* Perfil_Salud_NFCApp.swift */,
-				D363A72429959D8D00E48105 /* ContentView.swift */,
+				D363A7352995A7E800E48105 /* Views */,
 				D363A72629959D8E00E48105 /* Assets.xcassets */,
 				D363A72B29959D8E00E48105 /* Persistence.swift */,
 				D363A72D29959D8E00E48105 /* Perfil_Salud_NFC.xcdatamodeld */,
@@ -71,6 +75,16 @@
 				D363A72929959D8E00E48105 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D363A7352995A7E800E48105 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D363A72429959D8D00E48105 /* ContentView.swift */,
+				D363A7362995A80600E48105 /* ProfileView.swift */,
+				D363A7382995A81500E48105 /* NFCReaderView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +159,8 @@
 			files = (
 				D363A72C29959D8E00E48105 /* Persistence.swift in Sources */,
 				D363A72F29959D8E00E48105 /* Perfil_Salud_NFC.xcdatamodeld in Sources */,
+				D363A7392995A81500E48105 /* NFCReaderView.swift in Sources */,
+				D363A7372995A80600E48105 /* ProfileView.swift in Sources */,
 				D363A72529959D8D00E48105 /* ContentView.swift in Sources */,
 				D363A72329959D8D00E48105 /* Perfil_Salud_NFCApp.swift in Sources */,
 			);

@@ -14,7 +14,6 @@ struct Perfil_Salud_NFCApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }
