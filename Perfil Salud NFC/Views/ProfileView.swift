@@ -11,7 +11,7 @@ struct ProfileView: View {
     var body: some View {
         
         NavigationView {
-            Text("hola")
+            Text("fotos del usuario, ")
             .navigationTitle("Perfil")
             
             
