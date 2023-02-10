@@ -8,16 +8,30 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @State var username=""
     var body: some View {
         
-        NavigationView {
-            Text("fotos del usuario, ")
-            .navigationTitle("Perfil")
-            
-            
+        
+        VStack{
+            NavigationView {
+                TextField(
+                        "User name (email address)",
+                        text: $username
+                )
+                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                .textInputAutocapitalization(.sentences)
+                    .disableAutocorrection(true)
+                    .border(.orange)
+                
+                
+                
+                .navigationTitle("Perfil")
+                
+                .toolbar{
+                    EditButton()
+                }
+            }
         }
-        
-        
     }
 }
 

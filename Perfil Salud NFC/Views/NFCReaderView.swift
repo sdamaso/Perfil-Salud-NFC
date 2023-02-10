@@ -12,6 +12,7 @@ struct NFCReaderView: View {
         
         NavigationView {
             Text("hola")
+            
             .navigationTitle("Escaner de NFC")
             
             
