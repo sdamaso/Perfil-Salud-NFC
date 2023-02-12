@@ -11,27 +11,23 @@ struct ProfileView: View {
     @State var username=""
     var body: some View {
         
-        
         VStack{
-            NavigationView {
-                TextField(
-                        "User name (email address)",
-                        text: $username
-                )
-                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-                .textInputAutocapitalization(.sentences)
-                    .disableAutocorrection(true)
-                    .border(.orange)
-                
-                
-                
-                .navigationTitle("Perfil")
-                
-                .toolbar{
-                    EditButton()
-                }
-            }
+            Text("Samuel")
+                .font(.title)
+            TextField(
+                "User name (email address)",
+                text: $username
+            )
+            .textInputAutocapitalization(.sentences)
+            .disableAutocorrection(true)
+            .border(.orange)
+            Text("Nombre y Apellidos")
+            
+            
         }
+        .navigationTitle("Perfil")
+        
+        .padding()
     }
 }
 
