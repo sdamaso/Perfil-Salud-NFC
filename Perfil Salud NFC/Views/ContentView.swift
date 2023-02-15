@@ -12,10 +12,14 @@ struct ContentView: View {
     var body: some View {
         TabView {
             ProfileView()
+//            ProfileList()
                 .tabItem{
                     Image(systemName: "person.fill")
                     Text("Perfil")
+                        
                 }
+                
+                
             NFCReaderView()
                 .tabItem{
                     Image(systemName: "magnifyingglass")
@@ -24,6 +28,9 @@ struct ContentView: View {
                 
                 
         }
+        
+        
+        
         
         
     }
