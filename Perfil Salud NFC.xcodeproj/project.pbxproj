@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D33F6B7C29AC076200C8A596 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D33F6B7B29AC076200C8A596 /* GoogleService-Info.plist */; };
+		D33F6B7F29AC09EB00C8A596 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = D33F6B7E29AC09EB00C8A596 /* FirebaseCrashlytics */; };
+		D33F6B8129AC09EB00C8A596 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = D33F6B8029AC09EB00C8A596 /* FirebaseDatabase */; };
+		D33F6B8329AC09EB00C8A596 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D33F6B8229AC09EB00C8A596 /* FirebaseDatabaseSwift */; };
+		D33F6B8529AC09EB00C8A596 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D33F6B8429AC09EB00C8A596 /* FirebaseFirestore */; };
+		D33F6B8729AC09EB00C8A596 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = D33F6B8629AC09EB00C8A596 /* FirebaseFirestoreCombine-Community */; };
+		D33F6B8929AC09EB00C8A596 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D33F6B8829AC09EB00C8A596 /* FirebaseFirestoreSwift */; };
+		D33F6B8B29AC09EB00C8A596 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = D33F6B8A29AC09EB00C8A596 /* FirebaseStorage */; };
+		D33F6B8D29AC09EB00C8A596 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = D33F6B8C29AC09EB00C8A596 /* FirebaseStorageCombine-Community */; };
 		D363A72329959D8D00E48105 /* Perfil_Salud_NFCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D363A72229959D8D00E48105 /* Perfil_Salud_NFCApp.swift */; };
 		D363A72529959D8D00E48105 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D363A72429959D8D00E48105 /* ContentView.swift */; };
 		D363A72729959D8E00E48105 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D363A72629959D8E00E48105 /* Assets.xcassets */; };
@@ -21,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D33F6B7B29AC076200C8A596 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D363A71F29959D8D00E48105 /* Perfil Salud NFC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Perfil Salud NFC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D363A72229959D8D00E48105 /* Perfil_Salud_NFCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perfil_Salud_NFCApp.swift; sourceTree = "<group>"; };
 		D363A72429959D8D00E48105 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,6 +50,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D33F6B8329AC09EB00C8A596 /* FirebaseDatabaseSwift in Frameworks */,
+				D33F6B8529AC09EB00C8A596 /* FirebaseFirestore in Frameworks */,
+				D33F6B8D29AC09EB00C8A596 /* FirebaseStorageCombine-Community in Frameworks */,
+				D33F6B8129AC09EB00C8A596 /* FirebaseDatabase in Frameworks */,
+				D33F6B8729AC09EB00C8A596 /* FirebaseFirestoreCombine-Community in Frameworks */,
+				D33F6B8B29AC09EB00C8A596 /* FirebaseStorage in Frameworks */,
+				D33F6B7F29AC09EB00C8A596 /* FirebaseCrashlytics in Frameworks */,
+				D33F6B8929AC09EB00C8A596 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +87,7 @@
 				D363A7352995A7E800E48105 /* Views */,
 				D363A72629959D8E00E48105 /* Assets.xcassets */,
 				D363A72B29959D8E00E48105 /* Persistence.swift */,
+				D33F6B7B29AC076200C8A596 /* GoogleService-Info.plist */,
 				D363A72D29959D8E00E48105 /* Perfil_Salud_NFC.xcdatamodeld */,
 				D363A72829959D8E00E48105 /* Preview Content */,
 			);
@@ -136,6 +155,16 @@
 			dependencies = (
 			);
 			name = "Perfil Salud NFC";
+			packageProductDependencies = (
+				D33F6B7E29AC09EB00C8A596 /* FirebaseCrashlytics */,
+				D33F6B8029AC09EB00C8A596 /* FirebaseDatabase */,
+				D33F6B8229AC09EB00C8A596 /* FirebaseDatabaseSwift */,
+				D33F6B8429AC09EB00C8A596 /* FirebaseFirestore */,
+				D33F6B8629AC09EB00C8A596 /* FirebaseFirestoreCombine-Community */,
+				D33F6B8829AC09EB00C8A596 /* FirebaseFirestoreSwift */,
+				D33F6B8A29AC09EB00C8A596 /* FirebaseStorage */,
+				D33F6B8C29AC09EB00C8A596 /* FirebaseStorageCombine-Community */,
+			);
 			productName = "Perfil Salud NFC";
 			productReference = D363A71F29959D8D00E48105 /* Perfil Salud NFC.app */;
 			productType = "com.apple.product-type.application";
@@ -164,6 +193,9 @@
 				Base,
 			);
 			mainGroup = D363A71629959D8D00E48105;
+			packageReferences = (
+				D33F6B7D29AC09EB00C8A596 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = D363A72029959D8D00E48105 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -180,6 +212,7 @@
 			files = (
 				D363A72A29959D8E00E48105 /* Preview Assets.xcassets in Resources */,
 				D363A72729959D8E00E48105 /* Assets.xcassets in Resources */,
+				D33F6B7C29AC076200C8A596 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +432,60 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D33F6B7D29AC09EB00C8A596 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D33F6B7E29AC09EB00C8A596 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D33F6B7D29AC09EB00C8A596 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		D33F6B8029AC09EB00C8A596 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D33F6B7D29AC09EB00C8A596 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		D33F6B8229AC09EB00C8A596 /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D33F6B7D29AC09EB00C8A596 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+		D33F6B8429AC09EB00C8A596 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D33F6B7D29AC09EB00C8A596 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		D33F6B8629AC09EB00C8A596 /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D33F6B7D29AC09EB00C8A596 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		D33F6B8829AC09EB00C8A596 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D33F6B7D29AC09EB00C8A596 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		D33F6B8A29AC09EB00C8A596 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D33F6B7D29AC09EB00C8A596 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		D33F6B8C29AC09EB00C8A596 /* FirebaseStorageCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D33F6B7D29AC09EB00C8A596 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseStorageCombine-Community";
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		D363A72D29959D8E00E48105 /* Perfil_Salud_NFC.xcdatamodeld */ = {
