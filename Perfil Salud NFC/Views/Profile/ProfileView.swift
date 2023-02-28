@@ -106,14 +106,15 @@ struct ProfileView: View {
                             text: $username
                         )
                         
-                        Divider()
-                            .frame(height: 65)
-                            .opacity(/*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/)
+//                        Divider()
+//                            .frame(height: 65)
+//                            .opacity(/*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/)
                     }
                 }
             }
             .padding()
-            .edgesIgnoringSafeArea(.vertical)
+//            .ignoresSafeArea()
+//            .edgesIgnoringSafeArea(.vertical)
             
         }
     }
