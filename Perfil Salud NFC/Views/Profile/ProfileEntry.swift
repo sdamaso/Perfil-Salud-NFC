@@ -9,8 +9,13 @@ import SwiftUI
 
 struct ProfileEntry: View {
     var body: some View {
-        
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack{
+            CircleImage()
+                .frame(width: 100)
+            Text("Samuel Dámaso de Miguel")
+                .font(.title2)
+            Spacer()
+        }
     }
 }
 

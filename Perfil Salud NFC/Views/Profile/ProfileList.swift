@@ -9,9 +9,21 @@ import SwiftUI
 
 struct ProfileList: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView{
+            List{
+                NavigationLink{
+                    ProfileView()
+                }label: {
+                    ProfileEntry()
+                }
+            }
+            .navigationTitle("Perfiles")
+        }
+        
     }
+        
 }
+
 
 struct ProfileList_Previews: PreviewProvider {
     static var previews: some View {

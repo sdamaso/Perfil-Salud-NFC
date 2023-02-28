@@ -10,35 +10,32 @@ import SwiftUI
 struct ProfileView: View {
     @State var username=""
     var body: some View {
-        
-        VStack{
+        ScrollView(.vertical, showsIndicators: false){
             
             VStack{
-                CircleImage()
-                    .frame(width: 150, height: 150)
-                 
-                HStack(alignment: .center){
-                    Text("Samuel Dámaso de Miguel")
-                        .font(.title)
-                        .multilineTextAlignment(.center)
-                        
-                    //FUNCION PARA PONER CONTACTO PRINCIPAL
-                    Image(systemName: "star")
-                }
-                .padding(.top, -9.0)
-            }
-            
-            
-            Text("Descripción breve del usuario")
-                .font(.caption)
-                .foregroundColor(.secondary)
-                .multilineTextAlignment(.center)
-                .padding(.top, -9.0)
-            
-            ScrollView(.vertical, showsIndicators: false){
+                
                 VStack{
+                    CircleImage()
+                        .frame(width: 150)
                     
-                    
+                    HStack(alignment: .center){
+                        Text("Samuel Dámaso de Miguel")
+                            .font(.title)
+                            .multilineTextAlignment(.center)
+                        
+                        //FUNCION PARA PONER CONTACTO PRINCIPAL
+                        Image(systemName: "star")
+                    }
+                }
+                
+                Text("Descripción breve del usuario")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+                    .multilineTextAlignment(.center)
+                    .padding(.top, -9.0)
+                
+                
+                VStack{
                     VStack(alignment: .leading){
                         Text("Datos personales")
                             .font(.headline)
@@ -112,17 +109,13 @@ struct ProfileView: View {
                         Divider()
                             .frame(height: 65)
                             .opacity(/*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/)
-                            
-                            
                     }
                 }
             }
-            Spacer()
+            .padding()
+            .edgesIgnoringSafeArea(.vertical)
+            
         }
-        
-        .padding()
-        .edgesIgnoringSafeArea(.bottom)
-        
     }
 }
 

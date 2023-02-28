@@ -40,6 +40,7 @@
 		D363A72E29959D8E00E48105 /* Perfil_Salud_NFC.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Perfil_Salud_NFC.xcdatamodel; sourceTree = "<group>"; };
 		D363A7362995A80600E48105 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		D363A7382995A81500E48105 /* NFCReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCReaderView.swift; sourceTree = "<group>"; };
+		D3B1FE3629AE95D10082250C /* Perfil-Salud-NFC-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Perfil-Salud-NFC-Info.plist"; sourceTree = SOURCE_ROOT; };
 		D3EE277B299BF0B300C36E1F /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		D3EE277D299BFE0300C36E1F /* ProfileEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEntry.swift; sourceTree = "<group>"; };
 		D3EE277F299C4D7B00C36E1F /* ProfileList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileList.swift; sourceTree = "<group>"; };
@@ -88,6 +89,7 @@
 				D363A72629959D8E00E48105 /* Assets.xcassets */,
 				D363A72B29959D8E00E48105 /* Persistence.swift */,
 				D33F6B7B29AC076200C8A596 /* GoogleService-Info.plist */,
+				D3B1FE3629AE95D10082250C /* Perfil-Salud-NFC-Info.plist */,
 				D363A72D29959D8E00E48105 /* Perfil_Salud_NFC.xcdatamodeld */,
 				D363A72829959D8E00E48105 /* Preview Content */,
 			);
@@ -115,9 +117,9 @@
 		D3EE2778299BF04D00C36E1F /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				D363A7362995A80600E48105 /* ProfileView.swift */,
-				D3EE277D299BFE0300C36E1F /* ProfileEntry.swift */,
 				D3EE277F299C4D7B00C36E1F /* ProfileList.swift */,
+				D3EE277D299BFE0300C36E1F /* ProfileEntry.swift */,
+				D363A7362995A80600E48105 /* ProfileView.swift */,
 				D3EE277A299BF08E00C36E1F /* Components */,
 			);
 			path = Profile;
@@ -363,7 +365,7 @@
 				DEVELOPMENT_TEAM = X2677UJR94;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "Perfil-Salud-NFC-Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -392,7 +394,7 @@
 				DEVELOPMENT_TEAM = X2677UJR94;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "Perfil-Salud-NFC-Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

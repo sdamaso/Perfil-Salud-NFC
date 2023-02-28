@@ -10,8 +10,9 @@ import CoreData
 
 struct ContentView: View {
     var body: some View {
+        
         TabView {
-            ProfileView()
+            ProfileList()
                 .tabItem{
                     Image(systemName: "person.fill")
                     Text("Perfil")
@@ -23,15 +24,8 @@ struct ContentView: View {
                     Image(systemName: "magnifyingglass")
                     Text("Escanear")
                 }
-                
-                
         }
-     
     }
-
-    
-
-    
 }
 
 
