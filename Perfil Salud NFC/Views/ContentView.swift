@@ -9,6 +9,8 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
+    @EnvironmentObject private var launchScreenState: LaunchScreenStateManager
+    
     var body: some View {
         
         TabView {
@@ -25,6 +27,10 @@ struct ContentView: View {
                     Text("Escanear")
                 }
         }
+        .task {
+            try? await Task.sleep(for: Duration.seconds(3))
+            self.launchScreenState.dismiss()
+        }
     }
 }
 
@@ -33,5 +39,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(LaunchScreenStateManager())
     }
 }

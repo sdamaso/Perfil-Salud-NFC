@@ -290,7 +290,7 @@ struct ProfileView: View {
                 }
             }
             .padding()
-//            .ignoresSafeArea()
+            .ignoresSafeArea()
             .edgesIgnoringSafeArea(.vertical)
             
         }

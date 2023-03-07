@@ -22,10 +22,19 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 struct Perfil_Salud_NFCApp: App {
     let persistenceController = PersistenceController.shared
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @StateObject var launchScreenState = LaunchScreenStateManager()
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ZStack{
+                ContentView()
+                
+                if launchScreenState.state != .finished{
+                    LaunchScreenView()
+                }
+            }.environmentObject(launchScreenState)
+            
         }
     }
 }
+
