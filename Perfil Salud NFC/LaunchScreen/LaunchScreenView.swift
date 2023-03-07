@@ -37,7 +37,7 @@ struct LaunchScreenView: View {
     @ViewBuilder
     var body: some View {
         ZStack {
-            Color.white.ignoresSafeArea()
+            Color.teal.ignoresSafeArea()
             image
         }
 //        .onReceive(animationTimer) { timerValue in
