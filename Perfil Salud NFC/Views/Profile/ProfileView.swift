@@ -49,18 +49,19 @@ struct ProfileView: View {
                             "Nombre",
                             text: $username
                         )
-                        .textInputAutocapitalization(.sentences)
+                        .textInputAutocapitalization(.words)
                         TextField(
                             "Apellidos",
                             text: $username
                         )
+                        .textInputAutocapitalization(.words)
                         
                         Spacer()
                             .frame(height: 20.0)
                         Text("Dirección")
                             .font(.footnote)
                         TextField(
-                            "Nombre",
+                            "Domicilio",
                             text: $username
                         )
                         .textInputAutocapitalization(.sentences)
@@ -72,18 +73,194 @@ struct ProfileView: View {
                             .padding(.top)
                         Divider()
                             .padding(.bottom)
+                        Group{
+                            Group{
+                                Spacer()
+                                    .frame(height: 20.0)
+                                Text("Grupo Sanguíneo")
+                                    .font(.footnote)
+                                TextField(
+                                    "Domicilio",
+                                    text: $username
+                                )
+                                .textInputAutocapitalization(.sentences)
+                                
+                                Spacer()
+                                    .frame(height: 20.0)
+                                Text("Alergias")
+                                    .font(.footnote)
+                                TextField(
+                                    "Domicilio",
+                                    text: $username
+                                )
+                                .textInputAutocapitalization(.sentences)
+                            }
+                            Group{
+                                Spacer()
+                                    .frame(height: 20.0)
+                                Text("Estatura")
+                                    .font(.footnote)
+                                TextField(
+                                    "Domicilio",
+                                    text: $username
+                                )
+                                .textInputAutocapitalization(.sentences)
+                                
+                                Spacer()
+                                    .frame(height: 20.0)
+                                Text("Vacunas")
+                                    .font(.footnote)
+                                TextField(
+                                    "Domicilio",
+                                    text: $username
+                                )
+                                .textInputAutocapitalization(.sentences)
+                            }
+                        }
+                        Group{
+                            Group{
+                                Spacer()
+                                    .frame(height: 20.0)
+                                Text("Enfermedades")
+                                    .font(.footnote)
+                                TextField(
+                                    "Domicilio",
+                                    text: $username
+                                )
+                                .textInputAutocapitalization(.sentences)
+                                
+                                Spacer()
+                                    .frame(height: 20.0)
+                                Text("Medicación")
+                                    .font(.footnote)
+                                TextField(
+                                    "Domicilio",
+                                    text: $username
+                                )
+                                .textInputAutocapitalization(.sentences)
+                            }
+                            Group{
+                                Spacer()
+                                    .frame(height: 20.0)
+                                Text("Cirujías previas")
+                                    .font(.footnote)
+                                TextField(
+                                    "Domicilio",
+                                    text: $username
+                                )
+                                .textInputAutocapitalization(.sentences)
+                                
+                                Spacer()
+                                    .frame(height: 20.0)
+                                Text("Antecedentes médicos familiares")
+                                    .font(.footnote)
+                                TextField(
+                                    "Domicilio",
+                                    text: $username
+                                )
+                                .textInputAutocapitalization(.sentences)
+                            }
+                        }
+                        Group{
+                            Group{
+                                Spacer()
+                                    .frame(height: 20.0)
+                                Text("Donante de órganos")
+                                    .font(.footnote)
+                                TextField(
+                                    "Domicilio",
+                                    text: $username
+                                )
+                                .textInputAutocapitalization(.sentences)
+                                
+                                Spacer()
+                                    .frame(height: 20.0)
+                                Text("Sexo")
+                                    .font(.footnote)
+                                TextField(
+                                    "Domicilio",
+                                    text: $username
+                                )
+                                .textInputAutocapitalization(.sentences)
+                            }
+                            Group{
+                                Spacer()
+                                    .frame(height: 20.0)
+                                Text("Tratamientos en curso")
+                                    .font(.footnote)
+                                TextField(
+                                    "Domicilio",
+                                    text: $username
+                                )
+                                .textInputAutocapitalization(.sentences)
+                                
+                                Spacer()
+                                    .frame(height: 20.0)
+                                Text("Edad")
+                                    .font(.footnote)
+                                TextField(
+                                    "Domicilio",
+                                    text: $username
+                                )
+                                .textInputAutocapitalization(.sentences)
+                            }
+                        }
+                        Group{
+                            Group{
+                                Spacer()
+                                    .frame(height: 20.0)
+                                Text("Implantes")
+                                    .font(.footnote)
+                                TextField(
+                                    "Domicilio",
+                                    text: $username
+                                )
+                                .textInputAutocapitalization(.sentences)
+                                
+                                Spacer()
+                                    .frame(height: 20.0)
+                                Text("Embarazos")
+                                    .font(.footnote)
+                                TextField(
+                                    "Embarazos",
+                                    text: $username
+                                )
+                                .textInputAutocapitalization(.sentences)
+                            }
+                            Group{
+                                Spacer()
+                                    .frame(height: 20.0)
+                                Text("Partos")
+                                    .font(.footnote)
+                                TextField(
+                                    "Domicilio",
+                                    text: $username
+                                )
+                                .textInputAutocapitalization(.sentences)
+                                
+                                Spacer()
+                                    .frame(height: 20.0)
+                                Text("Vacunas")
+                                    .font(.footnote)
+                                TextField(
+                                    "Domicilio",
+                                    text: $username
+                                )
+                                .textInputAutocapitalization(.sentences)
+                            }
+                        }
                         
-                        Text("GRUPO SANGUINEO RH, ALERGIAS, ESTATURA, PESO, VACUNAS, ENFERMEDADES RESEÑABLES, MEDICACIÓN, CIRUJIAS PREVIAS, ANTECEDENTES MEDICOS FAMILIARES, DONANTE DE ORGANOS, SEXO, TRATAMIENTOS EN CURSO, CENTRO DE SALUD, MEDICO DE FAMILIA, ESPECIALISTAS, DATOS TARJETA SANITARIA, EDAD, (Implantes, marcapasos etc. Dentro de Cirujias previas sub grupos), (EN CASO DE MUJER, EMBARAZOS Y PARTOS)")
-                            .font(.footnote)
-                        TextField(
-                            "Nombre",
-                            text: $username
-                        )
-                        .textInputAutocapitalization(.sentences)
-                        TextField(
-                            "Apellidos",
-                            text: $username
-                        )
+                        
+                        
+                        
+//                        Text(", ENFERMEDADES RESEÑABLES, MEDICACIÓN, CIRUJIAS PREVIAS, ANTECEDENTES MEDICOS FAMILIARES, DONANTE DE ORGANOS, SEXO, TRATAMIENTOS EN CURSO, CENTRO DE SALUD, MEDICO DE FAMILIA, ESPECIALISTAS, DATOS TARJETA SANITARIA, EDAD, (Implantes, marcapasos etc. Dentro de Cirujias previas sub grupos), (EN CASO DE MUJER, EMBARAZOS Y PARTOS)")
+//                            .font(.footnote)
+//                        TextField(
+//                            "Nombre",
+//                            text: $username
+//                        )
+//                        .textInputAutocapitalization(.sentences)
+                        
                         
                     }
                     
@@ -94,7 +271,7 @@ struct ProfileView: View {
                         Divider()
                             .padding(.bottom)
                         
-                        Text("GRUPO SANGUINEO RH, ALERGIAS, ESTATURA, PESO, VACUNAS, ENFERMEDADES RESEÑABLES, MEDICACIÓN, CIRUJIAS PREVIAS, ANTECEDENTES MEDICOS FAMILIARES, DONANTE DE ORGANOS, SEXO, TRATAMIENTOS EN CURSO, CENTRO DE SALUD, MEDICO DE FAMILIA, ESPECIALISTAS, DATOS TARJETA SANITARIA, EDAD, (Implantes, marcapasos etc. Dentro de Cirujias previas sub grupos), (EN CASO DE MUJER, EMBARAZOS Y PARTOS)")
+                        Text("LISTA CONTACTOS EMERGENCIA")
                             .font(.footnote)
                         TextField(
                             "Nombre",
@@ -114,7 +291,7 @@ struct ProfileView: View {
             }
             .padding()
 //            .ignoresSafeArea()
-//            .edgesIgnoringSafeArea(.vertical)
+            .edgesIgnoringSafeArea(.vertical)
             
         }
     }
@@ -134,6 +311,7 @@ struct ProfileView: View {
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         ProfileView()
+            .previewDevice("iPhone 11")
     }
 }
 

@@ -86,8 +86,8 @@
 			children = (
 				D363A72229959D8D00E48105 /* Perfil_Salud_NFCApp.swift */,
 				D363A7352995A7E800E48105 /* Views */,
-				D363A72629959D8E00E48105 /* Assets.xcassets */,
 				D363A72B29959D8E00E48105 /* Persistence.swift */,
+				D363A72629959D8E00E48105 /* Assets.xcassets */,
 				D33F6B7B29AC076200C8A596 /* GoogleService-Info.plist */,
 				D3B1FE3629AE95D10082250C /* Perfil-Salud-NFC-Info.plist */,
 				D363A72D29959D8E00E48105 /* Perfil_Salud_NFC.xcdatamodeld */,
@@ -117,8 +117,6 @@
 		D3EE2778299BF04D00C36E1F /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				D3EE277F299C4D7B00C36E1F /* ProfileList.swift */,
-				D3EE277D299BFE0300C36E1F /* ProfileEntry.swift */,
 				D363A7362995A80600E48105 /* ProfileView.swift */,
 				D3EE277A299BF08E00C36E1F /* Components */,
 			);
@@ -136,6 +134,8 @@
 		D3EE277A299BF08E00C36E1F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D3EE277F299C4D7B00C36E1F /* ProfileList.swift */,
+				D3EE277D299BFE0300C36E1F /* ProfileEntry.swift */,
 				D3EE277B299BF0B300C36E1F /* CircleImage.swift */,
 			);
 			path = Components;
