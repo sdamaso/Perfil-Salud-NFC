@@ -28,7 +28,7 @@ struct NFCReaderView: View {
                     }
                     .padding(.top, -15.0)
                 }
-                .padding(.top, -330.0)
+                .padding(.top, -310.0)
         
                 Button (action: login){
                     Text("Leer tarjeta NFC")
