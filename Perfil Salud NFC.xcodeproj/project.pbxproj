@@ -33,7 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D33F6B7B29AC076200C8A596 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D33F6B7B29AC076200C8A596 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D35D6A1A29C0D63800D7B1F5 /* Perfil Salud NFC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Perfil Salud NFC.entitlements"; sourceTree = "<group>"; };
 		D363A71F29959D8D00E48105 /* Perfil Salud NFC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Perfil Salud NFC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D363A72229959D8D00E48105 /* Perfil_Salud_NFCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perfil_Salud_NFCApp.swift; sourceTree = "<group>"; };
 		D363A72429959D8D00E48105 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -90,6 +91,7 @@
 		D363A72129959D8D00E48105 /* Perfil Salud NFC */ = {
 			isa = PBXGroup;
 			children = (
+				D35D6A1A29C0D63800D7B1F5 /* Perfil Salud NFC.entitlements */,
 				D363A72229959D8D00E48105 /* Perfil_Salud_NFCApp.swift */,
 				D3ED84DE29B7E70A004F8421 /* LaunchScreen */,
 				D363A7352995A7E800E48105 /* Views */,
@@ -379,6 +381,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Perfil Salud NFC/Perfil Salud NFC.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Perfil Salud NFC/Preview Content\"";
@@ -386,6 +390,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Perfil-Salud-NFC-Info.plist";
+				INFOPLIST_KEY_NFCReaderUsageDescription = "Store in a data base the UID of the NFC for its use as an identifier for users";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -397,6 +402,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "TFG-Informatica.Perfil-Salud-NFC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -408,6 +414,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Perfil Salud NFC/Perfil Salud NFC.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Perfil Salud NFC/Preview Content\"";
@@ -415,6 +423,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Perfil-Salud-NFC-Info.plist";
+				INFOPLIST_KEY_NFCReaderUsageDescription = "Store in a data base the UID of the NFC for its use as an identifier for users";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -426,6 +435,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "TFG-Informatica.Perfil-Salud-NFC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

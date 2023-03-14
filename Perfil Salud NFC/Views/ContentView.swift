@@ -23,7 +23,7 @@ struct ContentView: View {
                                 
             NFCReaderView()
                 .tabItem{
-                    Image(systemName: "magnifyingglass")
+                    Image(systemName: "sensor.tag.radiowaves.forward")
                     Text("Escanear")
                 }
         }
