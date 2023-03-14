@@ -17,6 +17,13 @@ struct ProfileList: View {
                     ProfileEntry()
                 }
             }
+            .toolbar{
+                Button{
+                    //FUNCION AÑADIR PERFIL
+                } label: {
+                    Label("Add Profile", systemImage: "plus")
+                }
+            }
             .navigationTitle("Perfiles")
         }
         

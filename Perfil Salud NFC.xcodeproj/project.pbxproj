@@ -23,7 +23,7 @@
 		D363A72C29959D8E00E48105 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D363A72B29959D8E00E48105 /* Persistence.swift */; };
 		D363A72F29959D8E00E48105 /* Perfil_Salud_NFC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D363A72D29959D8E00E48105 /* Perfil_Salud_NFC.xcdatamodeld */; };
 		D363A7372995A80600E48105 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D363A7362995A80600E48105 /* ProfileView.swift */; };
-		D363A7392995A81500E48105 /* NFCReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D363A7382995A81500E48105 /* NFCReaderView.swift */; };
+		D363A7392995A81500E48105 /* NFCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D363A7382995A81500E48105 /* NFCView.swift */; };
 		D3ED84E029B7E74B004F8421 /* LaunchScreenStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ED84DF29B7E74B004F8421 /* LaunchScreenStep.swift */; };
 		D3ED84E229B7E78F004F8421 /* LaunchScreenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ED84E129B7E78F004F8421 /* LaunchScreenManager.swift */; };
 		D3ED84E429B7E89D004F8421 /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ED84E329B7E89D004F8421 /* LaunchScreenView.swift */; };
@@ -43,7 +43,7 @@
 		D363A72B29959D8E00E48105 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		D363A72E29959D8E00E48105 /* Perfil_Salud_NFC.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Perfil_Salud_NFC.xcdatamodel; sourceTree = "<group>"; };
 		D363A7362995A80600E48105 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		D363A7382995A81500E48105 /* NFCReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCReaderView.swift; sourceTree = "<group>"; };
+		D363A7382995A81500E48105 /* NFCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCView.swift; sourceTree = "<group>"; };
 		D3B1FE3629AE95D10082250C /* Perfil-Salud-NFC-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Perfil-Salud-NFC-Info.plist"; sourceTree = SOURCE_ROOT; };
 		D3ED84DF29B7E74B004F8421 /* LaunchScreenStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenStep.swift; sourceTree = "<group>"; };
 		D3ED84E129B7E78F004F8421 /* LaunchScreenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenManager.swift; sourceTree = "<group>"; };
@@ -145,7 +145,7 @@
 		D3EE2779299BF06C00C36E1F /* NFC */ = {
 			isa = PBXGroup;
 			children = (
-				D363A7382995A81500E48105 /* NFCReaderView.swift */,
+				D363A7382995A81500E48105 /* NFCView.swift */,
 			);
 			path = NFC;
 			sourceTree = "<group>";
@@ -250,7 +250,7 @@
 				D363A72F29959D8E00E48105 /* Perfil_Salud_NFC.xcdatamodeld in Sources */,
 				D3EE2780299C4D7B00C36E1F /* ProfileList.swift in Sources */,
 				D3ED84E229B7E78F004F8421 /* LaunchScreenManager.swift in Sources */,
-				D363A7392995A81500E48105 /* NFCReaderView.swift in Sources */,
+				D363A7392995A81500E48105 /* NFCView.swift in Sources */,
 				D3EE277C299BF0B300C36E1F /* CircleImage.swift in Sources */,
 				D363A7372995A80600E48105 /* ProfileView.swift in Sources */,
 				D363A72529959D8D00E48105 /* ContentView.swift in Sources */,

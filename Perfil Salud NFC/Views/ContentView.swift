@@ -21,9 +21,9 @@ struct ContentView: View {
                         
                 }
                                 
-            NFCReaderView()
+            NFCView()
                 .tabItem{
-                    Image(systemName: "sensor.tag.radiowaves.forward")
+                    Image(systemName: "wave.3.right.circle")
                     Text("Escanear")
                 }
         }
