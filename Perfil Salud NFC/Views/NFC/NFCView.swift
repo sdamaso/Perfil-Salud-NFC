@@ -38,7 +38,7 @@ struct NFCView: View {
                 
                 VStack {
                     Button {
-                        
+                        NFCController().scanNFC()
                     } label: {
                         Image(systemName: "square.and.pencil")
                             .font(.system(size: 25))

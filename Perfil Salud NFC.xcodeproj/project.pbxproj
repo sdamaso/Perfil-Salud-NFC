@@ -16,6 +16,7 @@
 		D33F6B8929AC09EB00C8A596 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D33F6B8829AC09EB00C8A596 /* FirebaseFirestoreSwift */; };
 		D33F6B8B29AC09EB00C8A596 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = D33F6B8A29AC09EB00C8A596 /* FirebaseStorage */; };
 		D33F6B8D29AC09EB00C8A596 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = D33F6B8C29AC09EB00C8A596 /* FirebaseStorageCombine-Community */; };
+		D35D6A1C29C2368000D7B1F5 /* NFCController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35D6A1B29C2368000D7B1F5 /* NFCController.swift */; };
 		D363A72329959D8D00E48105 /* Perfil_Salud_NFCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D363A72229959D8D00E48105 /* Perfil_Salud_NFCApp.swift */; };
 		D363A72529959D8D00E48105 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D363A72429959D8D00E48105 /* ContentView.swift */; };
 		D363A72729959D8E00E48105 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D363A72629959D8E00E48105 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 /* Begin PBXFileReference section */
 		D33F6B7B29AC076200C8A596 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D35D6A1A29C0D63800D7B1F5 /* Perfil Salud NFC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Perfil Salud NFC.entitlements"; sourceTree = "<group>"; };
+		D35D6A1B29C2368000D7B1F5 /* NFCController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCController.swift; sourceTree = "<group>"; };
 		D363A71F29959D8D00E48105 /* Perfil Salud NFC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Perfil Salud NFC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D363A72229959D8D00E48105 /* Perfil_Salud_NFCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perfil_Salud_NFCApp.swift; sourceTree = "<group>"; };
 		D363A72429959D8D00E48105 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				D363A7382995A81500E48105 /* NFCView.swift */,
+				D35D6A1B29C2368000D7B1F5 /* NFCController.swift */,
 			);
 			path = NFC;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				D363A7392995A81500E48105 /* NFCView.swift in Sources */,
 				D3EE277C299BF0B300C36E1F /* CircleImage.swift in Sources */,
 				D363A7372995A80600E48105 /* ProfileView.swift in Sources */,
+				D35D6A1C29C2368000D7B1F5 /* NFCController.swift in Sources */,
 				D363A72529959D8D00E48105 /* ContentView.swift in Sources */,
 				D363A72329959D8D00E48105 /* Perfil_Salud_NFCApp.swift in Sources */,
 				D3ED84E429B7E89D004F8421 /* LaunchScreenView.swift in Sources */,
@@ -294,6 +298,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ALLOW_ENTITLEMENTS_MODIFICATION = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -354,6 +359,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ALLOW_ENTITLEMENTS_MODIFICATION = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
