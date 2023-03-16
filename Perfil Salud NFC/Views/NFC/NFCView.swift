@@ -9,15 +9,16 @@ import SwiftUI
 
 struct NFCView: View {
     @State private var showInfo = false
+     var nfc = NFCController()
+    
     var body: some View {
-        
         NavigationView {
             VStack {
                 VStack{
-                    Text("La pantalla Escaner de NFC tiene dos funcionalidades, dependiendo de la necesidad del usuario.")
+                    Text("La pantalla Escaner de NFC tiene dos funcionalidades, dependiendo de la necesidad del usuario.\n\nEl botón \(Image(systemName: "square.and.pencil")) Guardar perfiles permite almacenar en un tag NFC los perfiles de salud que seleccione.\n\nEl botón \(Image(systemName: "magnifyingglass")) Escanear NFC permite ver los perfiles almacenados dentro de una tarjeta.")
                         .font(.subheadline)
                         .fontWeight(.medium)
-                        .padding([.leading, .bottom, .trailing])
+                        .padding([.bottom,.horizontal])
                     
                     Text("Para obtener más información pulse en el botón.")
                         .font(.caption)
@@ -38,7 +39,7 @@ struct NFCView: View {
                 
                 VStack {
                     Button {
-                        NFCController().scanNFC()
+                        nfc.scanNFC()
                     } label: {
                         Image(systemName: "square.and.pencil")
                             .font(.system(size: 25))
@@ -47,7 +48,7 @@ struct NFCView: View {
                     .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                     
                     Button {
-                       
+                        print("El UID extraido es: \(nfc.UID ?? "None")")
                     }
                 label: {
                     Image(systemName: "magnifyingglass")
