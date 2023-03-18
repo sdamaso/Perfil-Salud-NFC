@@ -20,48 +20,24 @@ struct LaunchScreenView: View {
             .resizable()
             .scaledToFit()
             .frame(width: 100, height: 100)
-//            .rotationEffect(firstAnimation ? Angle(degrees: 900) : Angle(degrees: 1800))
-//            .scaleEffect(secondAnimation ? 0 : 1)
-//            .offset(y: secondAnimation ? 400 : 0)
+            .foregroundColor(Color(hue: 0.547, saturation: 0.223, brightness: 1.0))
     }
     
-//    @ViewBuilder
-//    private var backgroundColor: some View{
-//        Color.white.ignoresSafeArea()
-//    }
-    
-//    private let animationTimer = Timer
-//        .publish(every: 0.5, on: .current, in: .common)
-//        .autoconnect()
+    @ViewBuilder
+    private var backgroundColor: some View{
+        let gradient = Gradient(colors: [Color.blue,
+                                         Color.teal])
+        LinearGradient(gradient: gradient, startPoint: .topLeading, endPoint: .bottomTrailing)
+            .ignoresSafeArea()
+    }
     
     @ViewBuilder
     var body: some View {
         ZStack {
-            Color.teal.ignoresSafeArea()
+            backgroundColor
             image
         }
-//        .onReceive(animationTimer) { timerValue in
-//            updateAnimation()
-//        }.opacity(startFadeoutAnimation ? 0 : 1)
     }
-    
-//    private func updateAnimation() {
-//        switch launchScreenState.state {
-//        case .start:
-//            withAnimation(.easeInOut(duration: 0.9)) {
-//                firstAnimation.toggle()
-//            }
-//        case .middle:
-//            if !secondAnimation {
-//                withAnimation(.linear) {
-//                    self.secondAnimation = true
-////                    startFadeoutAnimation = true
-//                }
-//            }
-//        case .finished:
-//            break
-//        }
-//    }
 }
 
 struct LaunchScreenView_Previews: PreviewProvider {

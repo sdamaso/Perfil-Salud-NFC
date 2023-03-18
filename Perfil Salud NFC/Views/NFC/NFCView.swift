@@ -9,7 +9,35 @@ import SwiftUI
 
 struct NFCView: View {
     @State private var showInfo = false
-     var nfc = NFCController()
+    var nfc = NFCController()
+    
+    
+    var infoView: some View{
+        ScrollView(.vertical, showsIndicators: false){
+            VStack{
+                HStack {
+                    Image(systemName: "radiowaves.right")
+                        .font(.system(size: 30))
+                    
+                    Text("Información sobre el uso de NFC")
+                        .font(.title)
+                        .fontWeight(.heavy)
+                }
+                Text("La aplicación Perfil Salud permite crear un expediente sanitario donde se pueda contener toda la información medica del usuario en un mismo sitio almacenada y accesible en cualquier momento. Para que la portabilidad y accesibilidad a la aplicación y a sus datos sea aun mayor, mediante el uso de tags NFC se podrán guardar los perfiles elegidos por el usuario en su interior.\nDe esta manera, desde cualquier dispositivo que cuente con la aplicación Perfil Salud se tendrá acceso a los perfiles guardados en un tag NFC.\nEn este sentido la aplicación cuenta con dos botones con dos funcionalidade distintas. ")
+                    .padding()
+                
+                Text("1. Guardar en la tarjeta NFC del usuario la información correspondiente a los perfiles que se seleccionen, para poder ser accedidos en cualquier momento mediante el escaneo de la correspondiente tarjeta NFC.")
+                    .padding()
+                
+                
+                Text("2. Escanear la tarjeta NFC de un ususario con el fin de acceder a los perfiles médicos que se hayan guardado en el dispositivo.")
+                    .padding()
+            }
+            .padding(.top)
+            .padding()
+            .ignoresSafeArea()
+        }
+    }
     
     var body: some View {
         NavigationView {
@@ -59,34 +87,15 @@ struct NFCView: View {
             }
             .navigationTitle("Escaner de NFC")
             .sheet(isPresented: $showInfo){
-                VStack{
-                    HStack {
-                        Image(systemName: "radiowaves.right")
-                            .font(.system(size: 30))
-                        Text("Información sobre el uso de NFC")
-                            .font(.title)
-                            .fontWeight(.heavy)
-                    }
-                    Text("1. Guardar en la tarjeta NFC del usuario la información correspondiente a los perfiles que se seleccionen, para poder ser accedidos en cualquier momento mediante el escaneo de la correspondiente tarjeta NFC.")
-                        .padding()
-                    
-                    
-                    Text("2. Escanear la tarjeta NFC de un ususario con el fin de acceder a los perfiles médicos que se hayan guardado en el dispositivo.")
-                        .padding()
-                }
-                .padding(.top, -350)
-                .padding()
+                infoView
             }
         }
     }
-}
-
-func login (){
-    print("Hola")
-}
-
-struct NFCView_Previews: PreviewProvider {
-    static var previews: some View {
-        NFCView()
+    
+    
+    struct NFCView_Previews: PreviewProvider {
+        static var previews: some View {
+            NFCView()
+        }
     }
 }
