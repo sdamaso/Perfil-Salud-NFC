@@ -44,5 +44,6 @@ struct LaunchScreenView_Previews: PreviewProvider {
     static var previews: some View {
         LaunchScreenView()
             .environmentObject(LaunchScreenStateManager())
+            .previewDevice("iPhone 11")
     }
 }

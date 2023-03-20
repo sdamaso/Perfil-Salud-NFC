@@ -96,6 +96,7 @@ struct NFCView: View {
     struct NFCView_Previews: PreviewProvider {
         static var previews: some View {
             NFCView()
+                .previewDevice("iPhone 11")
         }
     }
 }

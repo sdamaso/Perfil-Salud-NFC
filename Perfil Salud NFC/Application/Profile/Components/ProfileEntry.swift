@@ -8,19 +8,27 @@
 import SwiftUI
 
 struct ProfileEntry: View {
+    var profile: ProfileModel
+    
     var body: some View {
         HStack{
             CircleImage()
                 .frame(width: 100)
-            Text("Samuel Dámaso de Miguel")
+            Text(profile.nombre)
                 .font(.title2)
             Spacer()
+            if profile.isFavorited ?? false{
+                Image(systemName: "star.fill")
+                    .padding()
+                    .foregroundColor(Color.yellow)
+            }
         }
     }
 }
 
 struct ProfileEntry_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileEntry()
+        ProfileEntry(profile: ProfileModel(nombre: "Samuel Dámaso",nfc: nil, isFavorited: true))
+            .previewDevice("iPhone 11")
     }
 }

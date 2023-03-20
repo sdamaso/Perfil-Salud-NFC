@@ -10,11 +10,13 @@ import CoreData
 
 struct ContentView: View {
     @EnvironmentObject private var launchScreenState: LaunchScreenStateManager
+    @StateObject var profileViewModel: ProfileViewModel = ProfileViewModel()
     
     var body: some View {
         
         TabView {
-            ProfileList()
+            ProfileView(profileViewModel: profileViewModel)
+            
                 .tabItem{
                     Image(systemName: "person.fill")
                     Text("Perfil")
@@ -40,5 +42,6 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
             .environmentObject(LaunchScreenStateManager())
+            .previewDevice("iPhone 11")
     }
 }

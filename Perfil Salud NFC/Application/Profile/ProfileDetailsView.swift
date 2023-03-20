@@ -7,24 +7,36 @@
 
 import SwiftUI
 
-struct ProfileView: View {
+struct ProfileDetailsView: View {
+    var profile: ProfileModel
+    
     @State var username=""
+    @State var favorite = false
+    
     var body: some View {
         ScrollView(.vertical, showsIndicators: false){
-            
             VStack{
-                
                 VStack{
                     CircleImage()
                         .frame(width: 150)
                     
                     HStack(alignment: .center){
-                        Text("Samuel Dámaso de Miguel")
+                        Text(profile.nombre)
                             .font(.title)
                             .multilineTextAlignment(.center)
                         
                         //FUNCION PARA PONER CONTACTO PRINCIPAL
-                        Image(systemName: "star")
+                        Button{
+                            favorite.toggle()
+                        }label:{
+                            if (favorite){
+                                Image(systemName: "star.fill")
+                                    .foregroundColor(Color.yellow)
+                            } else{
+                                Image(systemName: "star")
+                                    .foregroundColor(Color.black)
+                            }
+                        }
                     }
                 }
                 
@@ -72,7 +84,7 @@ struct ProfileView: View {
                             .font(.headline)
                             .padding(.top)
                         Divider()
-                            .padding(.bottom)
+
                         Group{
                             Group{
                                 Spacer()
@@ -249,19 +261,6 @@ struct ProfileView: View {
                                 .textInputAutocapitalization(.sentences)
                             }
                         }
-                        
-                        
-                        
-                        
-//                        Text(", ENFERMEDADES RESEÑABLES, MEDICACIÓN, CIRUJIAS PREVIAS, ANTECEDENTES MEDICOS FAMILIARES, DONANTE DE ORGANOS, SEXO, TRATAMIENTOS EN CURSO, CENTRO DE SALUD, MEDICO DE FAMILIA, ESPECIALISTAS, DATOS TARJETA SANITARIA, EDAD, (Implantes, marcapasos etc. Dentro de Cirujias previas sub grupos), (EN CASO DE MUJER, EMBARAZOS Y PARTOS)")
-//                            .font(.footnote)
-//                        TextField(
-//                            "Nombre",
-//                            text: $username
-//                        )
-//                        .textInputAutocapitalization(.sentences)
-                        
-                        
                     }
                     
                     VStack(alignment: .leading){
@@ -282,35 +281,21 @@ struct ProfileView: View {
                             "Apellidos",
                             text: $username
                         )
-                        
-//                        Divider()
-//                            .frame(height: 65)
-//                            .opacity(/*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/)
                     }
                 }
             }
-            .padding()
-            .ignoresSafeArea()
-            .edgesIgnoringSafeArea(.vertical)
-            
+            //  TOOLBAR PARA BOTON DE EDITAR, SI EL BOTON DE EDITAR SE PRESIONA SE CAMBIA POR LA VISTA DE CREACIÓN DE PERFIL, PERO CON LOS DATOS COMPLETADOS.
+            .padding([.leading, .trailing, .bottom])
+//            .ignoresSafeArea()
+//            .edgesIgnoringSafeArea(.vertical)
         }
     }
 }
 
-/* TEXTFIELD PARA INSERTAR DATOS
- TextField(
- //                "User name (email address)",
- //                text: $username
- //            )
- //            .textInputAutocapitalization(.sentences)
- //            .disableAutocorrection(true)
- //            .border(.orange)
- */
 
-
-struct ProfileView_Previews: PreviewProvider {
+struct ProfileDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView()
+        ProfileDetailsView(profile: ProfileModel(nombre: "Samuel", nfc: ["12","1o2i"], isFavorited: false))
             .previewDevice("iPhone 11")
     }
 }
