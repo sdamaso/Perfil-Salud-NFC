@@ -12,12 +12,14 @@ struct ProfileEntry: View {
     
     var body: some View {
         HStack{
-            CircleImage()
+            CircleImage(profile: profile)
                 .frame(width: 100)
+                .scaledToFit()
+                
             Text(profile.nombre)
                 .font(.title2)
             Spacer()
-            if profile.isFavorited ?? false{
+            if profile.isFavorited {
                 Image(systemName: "star.fill")
                     .padding()
                     .foregroundColor(Color.yellow)
@@ -28,7 +30,7 @@ struct ProfileEntry: View {
 
 struct ProfileEntry_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileEntry(profile: ProfileModel(nombre: "Samuel Dámaso",nfc: nil, isFavorited: true))
+        ProfileEntry(profile: ProfileModel(nombre: "Samuel Damaso",nfc: nil, isFavorited: true, image: nil))
             .previewDevice("iPhone 11")
     }
 }

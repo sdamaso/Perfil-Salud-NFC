@@ -15,7 +15,8 @@ struct ProfileModel: Decodable, Identifiable{
     @DocumentID var id: String?
     let nombre: String
     let nfc: [String]?
-    let isFavorited: Bool?
+    let isFavorited: Bool
+    let image: String?
 }
 
 

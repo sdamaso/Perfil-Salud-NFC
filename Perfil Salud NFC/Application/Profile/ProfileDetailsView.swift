@@ -11,13 +11,13 @@ struct ProfileDetailsView: View {
     var profile: ProfileModel
     
     @State var username=""
-    @State var favorite = false
+//    @State var favorite = false
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: false){
             VStack{
                 VStack{
-                    CircleImage()
+                    CircleImage(profile: profile)
                         .frame(width: 150)
                     
                     HStack(alignment: .center){
@@ -27,14 +27,15 @@ struct ProfileDetailsView: View {
                         
                         //FUNCION PARA PONER CONTACTO PRINCIPAL
                         Button{
-                            favorite.toggle()
+                            //TODO: Actualizar contacto favorito
+//                            favorite.toggle()
                         }label:{
-                            if (favorite){
+                            if (profile.isFavorited){
                                 Image(systemName: "star.fill")
                                     .foregroundColor(Color.yellow)
                             } else{
                                 Image(systemName: "star")
-                                    .foregroundColor(Color.black)
+                                    .foregroundColor(Color.yellow)
                             }
                         }
                     }
@@ -283,11 +284,14 @@ struct ProfileDetailsView: View {
                         )
                     }
                 }
+                
             }
             //  TOOLBAR PARA BOTON DE EDITAR, SI EL BOTON DE EDITAR SE PRESIONA SE CAMBIA POR LA VISTA DE CREACIÓN DE PERFIL, PERO CON LOS DATOS COMPLETADOS.
+            
             .padding([.leading, .trailing, .bottom])
 //            .ignoresSafeArea()
 //            .edgesIgnoringSafeArea(.vertical)
+            
         }
     }
 }
@@ -295,7 +299,7 @@ struct ProfileDetailsView: View {
 
 struct ProfileDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileDetailsView(profile: ProfileModel(nombre: "Samuel", nfc: ["12","1o2i"], isFavorited: false))
+        ProfileDetailsView(profile: ProfileModel(nombre: "Samuel", nfc: ["12","1o2i"], isFavorited: true, image: ""))
             .previewDevice("iPhone 11")
     }
 }

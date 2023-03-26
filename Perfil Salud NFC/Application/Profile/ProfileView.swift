@@ -18,6 +18,15 @@ struct ProfileView: View {
                    
                     NavigationLink{
                         ProfileDetailsView(profile: profile)
+                            .navigationBarTitleDisplayMode(.inline)
+                            .toolbar{
+                                Button{
+                                    //TODO: llamar a clase que cambie la vista para modificar los valores de los perfiles y actualizarlos en la bbdd
+                                }label:{
+                                    Text("Editar")
+                                }
+                            }
+                            
                     }label: {
                         ProfileEntry(profile: profile)
                     }
@@ -30,12 +39,6 @@ struct ProfileView: View {
                         }
                         .tint(Color.red)
                     }
-                    
-//                    NavigationLink{
-//                        ProfileDetailsView()
-//                    }label: {
-//                        ProfileEntry(profile: profiles)
-//                    }
                 }
             }
             
@@ -45,14 +48,16 @@ struct ProfileView: View {
             .toolbar{
                 Button{
                     addProfile.toggle()
-                    //FUNCION AÑADIR PERFIL
                 } label: {
                     Image(systemName: "plus")
                 }
             }
             .navigationTitle("Perfiles")
+            
+            
             .sheet(isPresented: $addProfile){
-                //Create Profile View
+                //TODO: Create Profile View
+
             }
         }
         

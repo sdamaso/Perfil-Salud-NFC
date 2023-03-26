@@ -9,6 +9,7 @@ import SwiftUI
 
 struct NFCView: View {
     @State private var showInfo = false
+    @State private var showProfiles = false
     var nfc = NFCController()
     
     
@@ -46,7 +47,7 @@ struct NFCView: View {
                     Text("La pantalla Escaner de NFC tiene dos funcionalidades, dependiendo de la necesidad del usuario.\n\nEl botón \(Image(systemName: "square.and.pencil")) Guardar perfiles permite almacenar en un tag NFC los perfiles de salud que seleccione.\n\nEl botón \(Image(systemName: "magnifyingglass")) Escanear NFC permite ver los perfiles almacenados dentro de una tarjeta.")
                         .font(.subheadline)
                         .fontWeight(.medium)
-                        .padding([.bottom,.horizontal])
+                        .padding(.all)
                     
                     Text("Para obtener más información pulse en el botón.")
                         .font(.caption)
@@ -56,26 +57,26 @@ struct NFCView: View {
                     
                     Button{
                         showInfo.toggle()
+                    } label: {
+                        Image(systemName: "info.circle")
+                            .font(.system(size: 25))
                     }
-                label: {
-                    Image(systemName: "info.circle")
-                        .font(.system(size: 25))
                 }
-                .padding(.top, -10.0)
-                }
-                .padding(.top, -280.0)
                 
                 VStack {
                     Button {
                         nfc.scanNFC()
+                        showProfiles.toggle()
+                        
                     } label: {
                         Image(systemName: "square.and.pencil")
                             .font(.system(size: 25))
                         Text("Guardar perfiles")
                     }
-                    .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                    .padding()
                     
                     Button {
+                        showProfiles.toggle()
                         print("El UID extraido es: \(nfc.UID ?? "None")")
                     }
                 label: {
@@ -84,11 +85,16 @@ struct NFCView: View {
                     Text("Escanear tarjeta NFC")
                 }
                 }
+                Spacer()
             }
             .navigationTitle("Escaner de NFC")
             .sheet(isPresented: $showInfo){
                 infoView
             }
+            .sheet(isPresented: $showProfiles){
+                
+            }
+            
         }
     }
     
