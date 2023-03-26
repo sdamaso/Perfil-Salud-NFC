@@ -27,7 +27,7 @@ struct Perfil_Salud_NFCApp: App {
     var body: some Scene {
         WindowGroup {
             ZStack{
-                ContentView()
+                HomeView()
                 
                 if launchScreenState.state != .finished{
                     LaunchScreenView()

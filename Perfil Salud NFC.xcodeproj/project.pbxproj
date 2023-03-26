@@ -16,7 +16,7 @@
 		D360FBAE29C881AA005A5A90 /* ProfileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D360FBAD29C881AA005A5A90 /* ProfileRepository.swift */; };
 		D360FBB029C881BD005A5A90 /* ProfileDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D360FBAF29C881BD005A5A90 /* ProfileDatasource.swift */; };
 		D363A72329959D8D00E48105 /* Perfil_Salud_NFCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D363A72229959D8D00E48105 /* Perfil_Salud_NFCApp.swift */; };
-		D363A72529959D8D00E48105 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D363A72429959D8D00E48105 /* ContentView.swift */; };
+		D363A72529959D8D00E48105 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D363A72429959D8D00E48105 /* HomeView.swift */; };
 		D363A72729959D8E00E48105 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D363A72629959D8E00E48105 /* Assets.xcassets */; };
 		D363A72A29959D8E00E48105 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D363A72929959D8E00E48105 /* Preview Assets.xcassets */; };
 		D363A72C29959D8E00E48105 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D363A72B29959D8E00E48105 /* Persistence.swift */; };
@@ -40,7 +40,7 @@
 		D360FBAF29C881BD005A5A90 /* ProfileDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDatasource.swift; sourceTree = "<group>"; };
 		D363A71F29959D8D00E48105 /* Perfil Salud NFC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Perfil Salud NFC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D363A72229959D8D00E48105 /* Perfil_Salud_NFCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perfil_Salud_NFCApp.swift; sourceTree = "<group>"; };
-		D363A72429959D8D00E48105 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D363A72429959D8D00E48105 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D363A72629959D8E00E48105 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D363A72929959D8E00E48105 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D363A72B29959D8E00E48105 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -131,7 +131,7 @@
 		D363A7352995A7E800E48105 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				D363A72429959D8D00E48105 /* ContentView.swift */,
+				D363A72429959D8D00E48105 /* HomeView.swift */,
 				D3EE2778299BF04D00C36E1F /* Profile */,
 				D3EE2779299BF06C00C36E1F /* NFC */,
 			);
@@ -269,7 +269,7 @@
 				D3EE277C299BF0B300C36E1F /* CircleImage.swift in Sources */,
 				D363A7372995A80600E48105 /* ProfileDetailsView.swift in Sources */,
 				D35D6A1C29C2368000D7B1F5 /* NFCController.swift in Sources */,
-				D363A72529959D8D00E48105 /* ContentView.swift in Sources */,
+				D363A72529959D8D00E48105 /* HomeView.swift in Sources */,
 				D363A72329959D8D00E48105 /* Perfil_Salud_NFCApp.swift in Sources */,
 				D360FBB029C881BD005A5A90 /* ProfileDatasource.swift in Sources */,
 				D3ED84E429B7E89D004F8421 /* LaunchScreenView.swift in Sources */,

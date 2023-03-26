@@ -8,7 +8,7 @@
 import SwiftUI
 import CoreData
 
-struct ContentView: View {
+struct HomeView: View {
     @EnvironmentObject private var launchScreenState: LaunchScreenStateManager
     @StateObject var profileViewModel: ProfileViewModel = ProfileViewModel()
     
@@ -38,9 +38,9 @@ struct ContentView: View {
 
 
 
-struct ContentView_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        HomeView()
             .environmentObject(LaunchScreenStateManager())
             .previewDevice("iPhone 11")
     }
