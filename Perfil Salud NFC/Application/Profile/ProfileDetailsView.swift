@@ -17,8 +17,7 @@ struct ProfileDetailsView: View {
         ScrollView(.vertical, showsIndicators: false){
             VStack{
                 VStack{
-                    CircleImage(profile: profile)
-                        .frame(width: 150)
+                    CircleImage(profile: profile, size: 125)
                     
                     HStack(alignment: .center){
                         Text(profile.nombre)
@@ -299,7 +298,7 @@ struct ProfileDetailsView: View {
 
 struct ProfileDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileDetailsView(profile: ProfileModel(nombre: "Samuel", nfc: ["12","1o2i"], isFavorited: true, image: ""))
+        ProfileDetailsView(profile: ProfileModel(nombre: "Samuel", nfc: ["12","1o2i"], isFavorited: true, image: "Lorena Rodriguez"))
             .previewDevice("iPhone 11")
     }
 }

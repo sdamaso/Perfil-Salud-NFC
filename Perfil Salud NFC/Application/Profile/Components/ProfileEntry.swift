@@ -12,12 +12,12 @@ struct ProfileEntry: View {
     
     var body: some View {
         HStack{
-            CircleImage(profile: profile)
-                .frame(width: 100)
-                .scaledToFit()
+            CircleImage(profile: profile,size: 75)
                 
             Text(profile.nombre)
                 .font(.title2)
+                .padding()
+            
             Spacer()
             if profile.isFavorited {
                 Image(systemName: "star.fill")

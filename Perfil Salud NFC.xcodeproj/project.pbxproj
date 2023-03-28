@@ -70,6 +70,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D355784D29D0D6BA00E17DCA /* Authorisation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Authorisation;
+			sourceTree = "<group>";
+		};
 		D360FBAC29C88193005A5A90 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +116,7 @@
 				D35D6A1A29C0D63800D7B1F5 /* Perfil Salud NFC.entitlements */,
 				D363A72229959D8D00E48105 /* Perfil_Salud_NFCApp.swift */,
 				D3ED84DE29B7E70A004F8421 /* LaunchScreen */,
+				D355784D29D0D6BA00E17DCA /* Authorisation */,
 				D363A7352995A7E800E48105 /* Application */,
 				D363A72B29959D8E00E48105 /* Persistence.swift */,
 				D363A72629959D8E00E48105 /* Assets.xcassets */,
