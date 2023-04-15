@@ -11,7 +11,7 @@ import FirebaseFirestoreSwift
 
 
 
-struct ProfileModel: Decodable, Identifiable{
+struct ProfileModel: Decodable, Identifiable, Hashable{
     @DocumentID var id: String?
     let nombre: String
     let nfc: [String]?

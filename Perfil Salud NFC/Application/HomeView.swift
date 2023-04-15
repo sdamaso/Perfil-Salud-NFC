@@ -23,7 +23,7 @@ struct HomeView: View {
                         
                 }
                                 
-            NFCView()
+            NFCView(profileViewModel: profileViewModel)
                 .tabItem{
                     Image(systemName: "wave.3.right.circle")
                     Text("Escanear")

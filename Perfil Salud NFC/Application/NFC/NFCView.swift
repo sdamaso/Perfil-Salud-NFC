@@ -8,36 +8,55 @@
 import SwiftUI
 
 struct NFCView: View {
+    @ObservedObject var profileViewModel: ProfileViewModel
     @State private var showInfo = false
-    @State private var showProfiles = false
+    @State private var selectProfiles = false
+    @State var selection = Set<ProfileModel.ID>()
     var nfc = NFCController()
+
     
-    
-    var infoView: some View{
-        ScrollView(.vertical, showsIndicators: false){
-            VStack{
-                HStack {
-                    Image(systemName: "radiowaves.right")
-                        .font(.system(size: 30))
-                    
-                    Text("Información sobre el uso de NFC")
-                        .font(.title)
-                        .fontWeight(.heavy)
+    var selectProfile: some View{
+        NavigationView{
+            List(selection: $selection){
+                Section{
+                    ForEach(profileViewModel.profiles) { profile in
+                        HStack{
+                            CircleImage(profile: profile,size: 60)
+                            
+                            Text(profile.nombre)
+                                .font(.body)
+                                .padding(.leading, 5)
+                        }
+                    }
+                }header:{
+                    Text("Seleccione los perfiles que desee guardar")
                 }
-                Text("La aplicación Perfil Salud permite crear un expediente sanitario donde se pueda contener toda la información medica del usuario en un mismo sitio almacenada y accesible en cualquier momento. Para que la portabilidad y accesibilidad a la aplicación y a sus datos sea aun mayor, mediante el uso de tags NFC se podrán guardar los perfiles elegidos por el usuario en su interior.\nDe esta manera, desde cualquier dispositivo que cuente con la aplicación Perfil Salud se tendrá acceso a los perfiles guardados en un tag NFC.\nEn este sentido la aplicación cuenta con dos botones con dos funcionalidade distintas. ")
-                    .padding()
-                
-                Text("1. Guardar en la tarjeta NFC del usuario la información correspondiente a los perfiles que se seleccionen, para poder ser accedidos en cualquier momento mediante el escaneo de la correspondiente tarjeta NFC.")
-                    .padding()
-                
-                
-                Text("2. Escanear la tarjeta NFC de un ususario con el fin de acceder a los perfiles médicos que se hayan guardado en el dispositivo.")
-                    .padding()
             }
-            .padding(.top)
-            .padding()
-            .ignoresSafeArea()
+            .environment(\.editMode, .constant(EditMode.active))
+            .listStyle(.plain)
+            .task {
+                profileViewModel.getAllProfiles()
+            }
+            .toolbar{
+                ToolbarItem{
+                    Button{
+                        if selection.isEmpty{
+                            selectProfiles.toggle()
+                        }
+                        else{
+                            nfc.scanNFC()
+                            print(selection.count)
+                            selection.removeAll()
+                            selectProfiles.toggle()
+                        }
+                    } label:{
+                        Text("Guardar")
+                    }
+                }
+            }
         }
+        .padding(.all)
+        .ignoresSafeArea()
     }
     
     var body: some View {
@@ -65,9 +84,8 @@ struct NFCView: View {
                 
                 VStack {
                     Button {
-                        nfc.scanNFC()
-                        showProfiles.toggle()
-                        
+                        selectProfiles.toggle()
+                        selection.removeAll()
                     } label: {
                         Image(systemName: "square.and.pencil")
                             .font(.system(size: 25))
@@ -76,7 +94,8 @@ struct NFCView: View {
                     .padding()
                     
                     Button {
-                        showProfiles.toggle()
+                        nfc.scanNFC()
+//                        showProfiles.toggle()
                         print("El UID extraido es: \(nfc.UID ?? "None")")
                     }
                 label: {
@@ -89,10 +108,11 @@ struct NFCView: View {
             }
             .navigationTitle("Escaner de NFC")
             .sheet(isPresented: $showInfo){
-                infoView
+                InfoView()
             }
-            .sheet(isPresented: $showProfiles){
-                
+            .sheet(isPresented: $selectProfiles){
+                selectProfile
+                    .presentationDetents([.medium, .large])
             }
             
         }
@@ -101,7 +121,7 @@ struct NFCView: View {
     
     struct NFCView_Previews: PreviewProvider {
         static var previews: some View {
-            NFCView()
+            NFCView(profileViewModel: ProfileViewModel())
                 .previewDevice("iPhone 11")
         }
     }

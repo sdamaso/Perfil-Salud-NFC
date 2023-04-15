@@ -11,6 +11,11 @@
 		D33F6B7F29AC09EB00C8A596 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = D33F6B7E29AC09EB00C8A596 /* FirebaseCrashlytics */; };
 		D33F6B8529AC09EB00C8A596 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D33F6B8429AC09EB00C8A596 /* FirebaseFirestore */; };
 		D33F6B8929AC09EB00C8A596 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D33F6B8829AC09EB00C8A596 /* FirebaseFirestoreSwift */; };
+		D35638F829EAB7400061822E /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35638F729EAB7400061822E /* InfoView.swift */; };
+		D35638FC29EACA9A0061822E /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35638FB29EACA9A0061822E /* AuthenticationView.swift */; };
+		D35638FE29EACAA50061822E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35638FD29EACAA50061822E /* LoginView.swift */; };
+		D356390029EACAAD0061822E /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35638FF29EACAAD0061822E /* RegisterView.swift */; };
+		D356390229EB1B7D0061822E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D356390129EB1B7D0061822E /* FirebaseAuth */; };
 		D35D6A1C29C2368000D7B1F5 /* NFCController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35D6A1B29C2368000D7B1F5 /* NFCController.swift */; };
 		D360FBAB29C8818F005A5A90 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D360FBAA29C8818F005A5A90 /* ProfileViewModel.swift */; };
 		D360FBAE29C881AA005A5A90 /* ProfileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D360FBAD29C881AA005A5A90 /* ProfileRepository.swift */; };
@@ -33,6 +38,10 @@
 
 /* Begin PBXFileReference section */
 		D33F6B7B29AC076200C8A596 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D35638F729EAB7400061822E /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		D35638FB29EACA9A0061822E /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
+		D35638FD29EACAA50061822E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		D35638FF29EACAAD0061822E /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		D35D6A1A29C0D63800D7B1F5 /* Perfil Salud NFC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Perfil Salud NFC.entitlements"; sourceTree = "<group>"; };
 		D35D6A1B29C2368000D7B1F5 /* NFCController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCController.swift; sourceTree = "<group>"; };
 		D360FBAA29C8818F005A5A90 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
@@ -64,17 +73,29 @@
 				D33F6B8529AC09EB00C8A596 /* FirebaseFirestore in Frameworks */,
 				D33F6B7F29AC09EB00C8A596 /* FirebaseCrashlytics in Frameworks */,
 				D33F6B8929AC09EB00C8A596 /* FirebaseFirestoreSwift in Frameworks */,
+				D356390229EB1B7D0061822E /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D355784D29D0D6BA00E17DCA /* Authorisation */ = {
+		D355784D29D0D6BA00E17DCA /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				D35638FB29EACA9A0061822E /* AuthenticationView.swift */,
+				D35638FD29EACAA50061822E /* LoginView.swift */,
+				D35638FF29EACAAD0061822E /* RegisterView.swift */,
 			);
-			path = Authorisation;
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		D35638F629EAB7260061822E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D35638F729EAB7400061822E /* InfoView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		D360FBAC29C88193005A5A90 /* Repository */ = {
@@ -116,7 +137,7 @@
 				D35D6A1A29C0D63800D7B1F5 /* Perfil Salud NFC.entitlements */,
 				D363A72229959D8D00E48105 /* Perfil_Salud_NFCApp.swift */,
 				D3ED84DE29B7E70A004F8421 /* LaunchScreen */,
-				D355784D29D0D6BA00E17DCA /* Authorisation */,
+				D355784D29D0D6BA00E17DCA /* Authentication */,
 				D363A7352995A7E800E48105 /* Application */,
 				D363A72B29959D8E00E48105 /* Persistence.swift */,
 				D363A72629959D8E00E48105 /* Assets.xcassets */,
@@ -173,6 +194,7 @@
 			children = (
 				D363A7382995A81500E48105 /* NFCView.swift */,
 				D35D6A1B29C2368000D7B1F5 /* NFCController.swift */,
+				D35638F629EAB7260061822E /* Components */,
 			);
 			path = NFC;
 			sourceTree = "<group>";
@@ -206,6 +228,7 @@
 				D33F6B7E29AC09EB00C8A596 /* FirebaseCrashlytics */,
 				D33F6B8429AC09EB00C8A596 /* FirebaseFirestore */,
 				D33F6B8829AC09EB00C8A596 /* FirebaseFirestoreSwift */,
+				D356390129EB1B7D0061822E /* FirebaseAuth */,
 			);
 			productName = "Perfil Salud NFC";
 			productReference = D363A71F29959D8D00E48105 /* Perfil Salud NFC.app */;
@@ -266,9 +289,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3ED84E029B7E74B004F8421 /* LaunchScreenStep.swift in Sources */,
+				D356390029EACAAD0061822E /* RegisterView.swift in Sources */,
 				D3EE277E299BFE0300C36E1F /* ProfileEntry.swift in Sources */,
 				D363A72C29959D8E00E48105 /* Persistence.swift in Sources */,
 				D360FBAE29C881AA005A5A90 /* ProfileRepository.swift in Sources */,
+				D35638F829EAB7400061822E /* InfoView.swift in Sources */,
 				D363A72F29959D8E00E48105 /* Perfil_Salud_NFC.xcdatamodeld in Sources */,
 				D3EE2780299C4D7B00C36E1F /* ProfileView.swift in Sources */,
 				D3ED84E229B7E78F004F8421 /* LaunchScreenManager.swift in Sources */,
@@ -278,7 +303,9 @@
 				D363A7372995A80600E48105 /* ProfileDetailsView.swift in Sources */,
 				D35D6A1C29C2368000D7B1F5 /* NFCController.swift in Sources */,
 				D363A72529959D8D00E48105 /* HomeView.swift in Sources */,
+				D35638FC29EACA9A0061822E /* AuthenticationView.swift in Sources */,
 				D363A72329959D8D00E48105 /* Perfil_Salud_NFCApp.swift in Sources */,
+				D35638FE29EACAA50061822E /* LoginView.swift in Sources */,
 				D360FBB029C881BD005A5A90 /* ProfileDatasource.swift in Sources */,
 				D3ED84E429B7E89D004F8421 /* LaunchScreenView.swift in Sources */,
 			);
@@ -418,10 +445,11 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Perfil-Salud-NFC-Info.plist";
 				INFOPLIST_KEY_NFCReaderUsageDescription = "Store in a data base the UID of the NFC for its use as an identifier for users";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -451,10 +479,11 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Perfil-Salud-NFC-Info.plist";
 				INFOPLIST_KEY_NFCReaderUsageDescription = "Store in a data base the UID of the NFC for its use as an identifier for users";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -518,6 +547,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D33F6B7D29AC09EB00C8A596 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestoreSwift;
+		};
+		D356390129EB1B7D0061822E /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D33F6B7D29AC09EB00C8A596 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
 		};
 /* End XCSwiftPackageProductDependency section */
 
