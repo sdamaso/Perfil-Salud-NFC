@@ -9,13 +9,14 @@ import SwiftUI
 import CoreData
 
 struct HomeView: View {
+    @ObservedObject var authenticationViewModel: AuthenticationViewModel
     @EnvironmentObject private var launchScreenState: LaunchScreenStateManager
     @StateObject var profileViewModel: ProfileViewModel = ProfileViewModel()
     
     var body: some View {
         
         TabView {
-            ProfileView(profileViewModel: profileViewModel)
+            ProfileView(authenticationViewModel: authenticationViewModel, profileViewModel: profileViewModel)
             
                 .tabItem{
                     Image(systemName: "person.fill")
@@ -40,7 +41,7 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(authenticationViewModel: AuthenticationViewModel())
             .environmentObject(LaunchScreenStateManager())
             .previewDevice("iPhone 11")
     }

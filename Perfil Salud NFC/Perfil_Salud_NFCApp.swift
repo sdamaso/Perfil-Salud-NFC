@@ -10,12 +10,12 @@ import FirebaseCore
 
 
 class AppDelegate: NSObject, UIApplicationDelegate {
-  func application(_ application: UIApplication,
-                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-    FirebaseApp.configure()
-
-    return true
-  }
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        FirebaseApp.configure()
+        
+        return true
+    }
 }
 
 @main
@@ -23,17 +23,21 @@ struct Perfil_Salud_NFCApp: App {
     let persistenceController = PersistenceController.shared
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     @StateObject var launchScreenState = LaunchScreenStateManager()
-
+    @StateObject var authenticationViewModel = AuthenticationViewModel()
+    
     var body: some Scene {
         WindowGroup {
             ZStack{
-                HomeView()
+                if let _ = authenticationViewModel.user{
+                    HomeView(authenticationViewModel: authenticationViewModel)
+                } else{
+                    AuthenticationView(authenticationViewModel: authenticationViewModel)
+                }
                 
                 if launchScreenState.state != .finished{
                     LaunchScreenView()
                 }
             }.environmentObject(launchScreenState)
-            
         }
     }
 }

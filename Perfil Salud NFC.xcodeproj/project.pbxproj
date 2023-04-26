@@ -13,8 +13,6 @@
 		D33F6B8929AC09EB00C8A596 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D33F6B8829AC09EB00C8A596 /* FirebaseFirestoreSwift */; };
 		D35638F829EAB7400061822E /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35638F729EAB7400061822E /* InfoView.swift */; };
 		D35638FC29EACA9A0061822E /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35638FB29EACA9A0061822E /* AuthenticationView.swift */; };
-		D35638FE29EACAA50061822E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35638FD29EACAA50061822E /* LoginView.swift */; };
-		D356390029EACAAD0061822E /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35638FF29EACAAD0061822E /* RegisterView.swift */; };
 		D356390229EB1B7D0061822E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D356390129EB1B7D0061822E /* FirebaseAuth */; };
 		D35D6A1C29C2368000D7B1F5 /* NFCController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35D6A1B29C2368000D7B1F5 /* NFCController.swift */; };
 		D360FBAB29C8818F005A5A90 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D360FBAA29C8818F005A5A90 /* ProfileViewModel.swift */; };
@@ -28,6 +26,9 @@
 		D363A72F29959D8E00E48105 /* Perfil_Salud_NFC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D363A72D29959D8E00E48105 /* Perfil_Salud_NFC.xcdatamodeld */; };
 		D363A7372995A80600E48105 /* ProfileDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D363A7362995A80600E48105 /* ProfileDetailsView.swift */; };
 		D363A7392995A81500E48105 /* NFCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D363A7382995A81500E48105 /* NFCView.swift */; };
+		D3BE5DDB29F9667E00AF9E05 /* AuthenticationDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BE5DDA29F9667E00AF9E05 /* AuthenticationDatasource.swift */; };
+		D3BE5DDD29F9669300AF9E05 /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BE5DDC29F9669300AF9E05 /* AuthenticationRepository.swift */; };
+		D3BE5DDF29F9669D00AF9E05 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BE5DDE29F9669D00AF9E05 /* AuthenticationViewModel.swift */; };
 		D3ED84E029B7E74B004F8421 /* LaunchScreenStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ED84DF29B7E74B004F8421 /* LaunchScreenStep.swift */; };
 		D3ED84E229B7E78F004F8421 /* LaunchScreenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ED84E129B7E78F004F8421 /* LaunchScreenManager.swift */; };
 		D3ED84E429B7E89D004F8421 /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ED84E329B7E89D004F8421 /* LaunchScreenView.swift */; };
@@ -40,8 +41,6 @@
 		D33F6B7B29AC076200C8A596 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D35638F729EAB7400061822E /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		D35638FB29EACA9A0061822E /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
-		D35638FD29EACAA50061822E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		D35638FF29EACAAD0061822E /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		D35D6A1A29C0D63800D7B1F5 /* Perfil Salud NFC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Perfil Salud NFC.entitlements"; sourceTree = "<group>"; };
 		D35D6A1B29C2368000D7B1F5 /* NFCController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCController.swift; sourceTree = "<group>"; };
 		D360FBAA29C8818F005A5A90 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
@@ -57,6 +56,9 @@
 		D363A7362995A80600E48105 /* ProfileDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailsView.swift; sourceTree = "<group>"; };
 		D363A7382995A81500E48105 /* NFCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCView.swift; sourceTree = "<group>"; };
 		D3B1FE3629AE95D10082250C /* Perfil-Salud-NFC-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Perfil-Salud-NFC-Info.plist"; sourceTree = SOURCE_ROOT; };
+		D3BE5DDA29F9667E00AF9E05 /* AuthenticationDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationDatasource.swift; sourceTree = "<group>"; };
+		D3BE5DDC29F9669300AF9E05 /* AuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepository.swift; sourceTree = "<group>"; };
+		D3BE5DDE29F9669D00AF9E05 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		D3ED84DF29B7E74B004F8421 /* LaunchScreenStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenStep.swift; sourceTree = "<group>"; };
 		D3ED84E129B7E78F004F8421 /* LaunchScreenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenManager.swift; sourceTree = "<group>"; };
 		D3ED84E329B7E89D004F8421 /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
@@ -84,8 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				D35638FB29EACA9A0061822E /* AuthenticationView.swift */,
-				D35638FD29EACAA50061822E /* LoginView.swift */,
-				D35638FF29EACAAD0061822E /* RegisterView.swift */,
+				D3BE5DDE29F9669D00AF9E05 /* AuthenticationViewModel.swift */,
+				D3BE5DE029F966A700AF9E05 /* Repository */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -167,6 +169,15 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
+		D3BE5DE029F966A700AF9E05 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				D3BE5DDC29F9669300AF9E05 /* AuthenticationRepository.swift */,
+				D3BE5DDA29F9667E00AF9E05 /* AuthenticationDatasource.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		D3ED84DE29B7E70A004F8421 /* LaunchScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,7 +195,7 @@
 				D363A7362995A80600E48105 /* ProfileDetailsView.swift */,
 				D360FBAA29C8818F005A5A90 /* ProfileViewModel.swift */,
 				D360FBAC29C88193005A5A90 /* Repository */,
-				D3EE277A299BF08E00C36E1F /* Components */,
+				D3EE277A299BF08E00C36E1F /* View Components */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -199,13 +210,13 @@
 			path = NFC;
 			sourceTree = "<group>";
 		};
-		D3EE277A299BF08E00C36E1F /* Components */ = {
+		D3EE277A299BF08E00C36E1F /* View Components */ = {
 			isa = PBXGroup;
 			children = (
 				D3EE277D299BFE0300C36E1F /* ProfileEntry.swift */,
 				D3EE277B299BF0B300C36E1F /* CircleImage.swift */,
 			);
-			path = Components;
+			path = "View Components";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,7 +300,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3ED84E029B7E74B004F8421 /* LaunchScreenStep.swift in Sources */,
-				D356390029EACAAD0061822E /* RegisterView.swift in Sources */,
 				D3EE277E299BFE0300C36E1F /* ProfileEntry.swift in Sources */,
 				D363A72C29959D8E00E48105 /* Persistence.swift in Sources */,
 				D360FBAE29C881AA005A5A90 /* ProfileRepository.swift in Sources */,
@@ -298,14 +308,16 @@
 				D3EE2780299C4D7B00C36E1F /* ProfileView.swift in Sources */,
 				D3ED84E229B7E78F004F8421 /* LaunchScreenManager.swift in Sources */,
 				D360FBAB29C8818F005A5A90 /* ProfileViewModel.swift in Sources */,
+				D3BE5DDF29F9669D00AF9E05 /* AuthenticationViewModel.swift in Sources */,
 				D363A7392995A81500E48105 /* NFCView.swift in Sources */,
 				D3EE277C299BF0B300C36E1F /* CircleImage.swift in Sources */,
 				D363A7372995A80600E48105 /* ProfileDetailsView.swift in Sources */,
 				D35D6A1C29C2368000D7B1F5 /* NFCController.swift in Sources */,
+				D3BE5DDD29F9669300AF9E05 /* AuthenticationRepository.swift in Sources */,
 				D363A72529959D8D00E48105 /* HomeView.swift in Sources */,
+				D3BE5DDB29F9667E00AF9E05 /* AuthenticationDatasource.swift in Sources */,
 				D35638FC29EACA9A0061822E /* AuthenticationView.swift in Sources */,
 				D363A72329959D8D00E48105 /* Perfil_Salud_NFCApp.swift in Sources */,
-				D35638FE29EACAA50061822E /* LoginView.swift in Sources */,
 				D360FBB029C881BD005A5A90 /* ProfileDatasource.swift in Sources */,
 				D3ED84E429B7E89D004F8421 /* LaunchScreenView.swift in Sources */,
 			);
@@ -433,12 +445,13 @@
 		D363A73329959D8E00E48105 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon V2.0";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Perfil Salud NFC/Perfil Salud NFC.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_ASSET_PATHS = "\"Perfil Salud NFC/Preview Content\"";
 				DEVELOPMENT_TEAM = X2677UJR94;
 				ENABLE_PREVIEWS = YES;
@@ -449,7 +462,6 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -467,7 +479,7 @@
 		D363A73429959D8E00E48105 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon V2.0";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Perfil Salud NFC/Perfil Salud NFC.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -483,7 +495,6 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

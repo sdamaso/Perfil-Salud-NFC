@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @ObservedObject var authenticationViewModel: AuthenticationViewModel
     @ObservedObject var profileViewModel: ProfileViewModel
     @State private var addProfile = false
 
@@ -46,11 +47,27 @@ struct ProfileView: View {
                 profileViewModel.getAllProfiles()
             }
             .toolbar{
-                Button{
-                    addProfile.toggle()
-                } label: {
-                    Image(systemName: "plus")
+                ToolbarItem (placement: .navigationBarLeading){
+                    Button{
+                        authenticationViewModel.logout()
+                    } label: {
+                        Text("Logout")
+                    }
                 }
+                
+                ToolbarItem(placement: .navigationBarTrailing){
+                    Button{
+                        addProfile.toggle()
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                }
+                
+            
+                    
+                    
+                
+               
             }
             .navigationTitle("Perfiles")
             
@@ -68,7 +85,7 @@ struct ProfileView: View {
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView(profileViewModel: ProfileViewModel())
+        ProfileView(authenticationViewModel: AuthenticationViewModel(), profileViewModel: ProfileViewModel())
             .previewDevice("iPhone 11")
     }
 }

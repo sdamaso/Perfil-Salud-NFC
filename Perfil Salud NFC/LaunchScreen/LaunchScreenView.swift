@@ -16,17 +16,16 @@ struct LaunchScreenView: View {
     
     @ViewBuilder
     private var image: some View{
-        Image(systemName: "heart.text.square")
+        Image("Perfil Salud Icon V2.0")
             .resizable()
-            .scaledToFit()
-            .frame(width: 100, height: 100)
-            .foregroundColor(Color(hue: 0.547, saturation: 0.223, brightness: 1.0))
+//            .scaledToFit()
+            .frame(width: 200, height: 200)
+            .cornerRadius(25)
     }
     
     @ViewBuilder
     private var backgroundColor: some View{
-        let gradient = Gradient(colors: [Color.blue,
-                                         Color.teal])
+        let gradient = Gradient(colors: [Color.black])
         LinearGradient(gradient: gradient, startPoint: .topLeading, endPoint: .bottomTrailing)
             .ignoresSafeArea()
     }
@@ -35,7 +34,15 @@ struct LaunchScreenView: View {
     var body: some View {
         ZStack {
             backgroundColor
-            image
+            
+            VStack {
+                image
+                Text("PERFIL SALUD")
+                    .font(.largeTitle)
+                    .fontWeight(.heavy)
+                    .foregroundColor(Color("Color Logo"))
+            }
+            
         }
     }
 }
