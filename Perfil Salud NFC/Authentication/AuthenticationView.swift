@@ -160,22 +160,21 @@ struct AuthenticationView: View {
                 .padding(.top, 50)
                 
                 
-                Button {
-                    //TODO: RESETEAR CONTRASEÑA
-                } label: {
-                    Text("¿Ha olvidado su contraseña?")
-                        .foregroundColor(Color("Color Logo"))
-                        .underline()
-                    
-                }
-                .padding(.top, 5)
+//                Button {
+//                    //TODO: RESETEAR CONTRASEÑA
+//                } label: {
+//                    Text("¿Ha olvidado su contraseña?")
+//                        .foregroundColor(Color("Color Logo"))
+//                        .underline()
+//
+//                }
+//                .padding(.top, 5)
                 
                 Spacer()
                 
                 HStack {
                     Text("¿No estas registrado?")
                     Button {
-                        //TODO: IR A VISTA REGISTER Y ABRIR SHEETVIEW
                         createAccount.toggle()
                     } label: {
                         Text("Crea tu cuenta")
