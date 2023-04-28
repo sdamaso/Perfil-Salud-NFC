@@ -14,7 +14,7 @@ final class ProfileRepository{
         self.profileDatasource = profileDatasource
     }
     
-    func getAllProfiles (completionBlock: @escaping (Result<[ProfileModel], Error>) -> Void){
+    func getAllProfiles (completionBlock: @escaping (Result<[ProfileModel], Error>) -> Void){ //PASO MI AUTHVM PARA VER TODOS LOS PROFILES DEL USUARIO
         profileDatasource.getAllProfiles(completionBlock: completionBlock)
     }
 }

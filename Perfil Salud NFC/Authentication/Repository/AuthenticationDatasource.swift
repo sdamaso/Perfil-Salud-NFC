@@ -7,9 +7,12 @@
 
 import Foundation
 import FirebaseAuth
+import FirebaseFirestore
 
 struct User {
     let email: String
+    //Nombre
+    
 }
 
 
@@ -31,6 +34,7 @@ final class AuthenticationDatasource{
             }
             let email = result?.user.email ?? "No email"
             print("Nuevo usuario creado con el email \(email)")
+            self.addUserFirestore(email: email)
             completionBlock(.success(.init(email: email)))
         }
     }
@@ -50,6 +54,18 @@ final class AuthenticationDatasource{
     
     func logout() throws{
         try Auth.auth().signOut()
+    }
+    
+    private func addUserFirestore(email:String){
+        guard let uid = Auth.auth().currentUser?.uid else {return}
+        let userData = ["email":email, "uid":uid]
+        Firestore.firestore().collection("users").document(uid).setData(userData) { error in
+            if let error = error{
+                print(error)
+                return
+            }
+            print("User añadido a firestore con id: \(uid)")
+        }
     }
     
 }

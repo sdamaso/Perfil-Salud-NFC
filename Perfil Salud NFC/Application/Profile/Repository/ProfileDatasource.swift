@@ -8,6 +8,7 @@
 import Foundation
 import FirebaseFirestore
 import FirebaseFirestoreSwift
+import FirebaseAuth
 
 
 
@@ -26,8 +27,9 @@ final class ProfileDatasource{
 
     private let collection = "perfiles"
     
-    func getAllProfiles(completionBlock: @escaping (Result<[ProfileModel], Error>) -> Void){
-        database.collection(collection)
+    func getAllProfiles(completionBlock: @escaping (Result<[ProfileModel], Error>) -> Void){//PASO MI AUTHVM PARA VER TODOS LOS PROFILES DEL USUARIO
+        guard let uid = Auth.auth().currentUser?.uid else {return}
+        database.collection("users").document(uid).collection(collection)
             .addSnapshotListener { query, error in
                 if let error = error{
                     completionBlock(.failure(error))

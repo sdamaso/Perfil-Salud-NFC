@@ -8,6 +8,8 @@
 import Foundation
 
 final class ProfileViewModel: ObservableObject{
+    //OBSERVEDOBJECT AUTHVM
+    
     @Published var profiles: [ProfileModel] = []
     @Published var messageError: String?
     private let profileRepository: ProfileRepository
@@ -16,7 +18,7 @@ final class ProfileViewModel: ObservableObject{
         self.profileRepository = profileRepository
     }
     
-    func getAllProfiles(){
+    func getAllProfiles(){ 
         profileRepository.getAllProfiles{ [weak self] result in
             switch result {
             case .success(let profileModels):

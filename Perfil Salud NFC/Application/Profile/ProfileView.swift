@@ -51,7 +51,7 @@ struct ProfileView: View {
                     Button{
                         authenticationViewModel.logout()
                     } label: {
-                        Text("Logout")
+                        Image(systemName: "rectangle.portrait.and.arrow.right")
                     }
                 }
                 
