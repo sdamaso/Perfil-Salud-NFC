@@ -14,10 +14,32 @@ import FirebaseAuth
 
 struct ProfileModel: Decodable, Identifiable, Hashable{
     @DocumentID var id: String?
+    let isFavorited: Bool?
+    //DATOS PERSONALES
     let nombre: String
-    let nfc: [String]?
-    let isFavorited: Bool
     let image: String?
+    let edad: String?
+    let telefono: String?
+    let direccion: String?
+//    let nfc: [String]?
+    //DATOS MÉDICOS
+    let peso: String?
+    let estatura: String?
+    let sexo: String?
+    let grupoAndRh: String?
+    let alergias: [String]?
+    let medicacion: [String]?
+    let enfermedades: [String]?
+    let tratamientos: [String]?
+    let antecedentes: [String]?
+    let vacunas: [String]?
+    let donanteOrg: Bool?
+    let cirugiasPrev: [String]?
+    let implantes: [String]?
+    let embarazos: String?
+    let partos: String?
+    //DATOS DE CONTACTOS DE EMERGENCIA
+    let contactos: [String:String]?
 }
 
 
@@ -25,11 +47,12 @@ final class ProfileDatasource{
     
     private let database = Firestore.firestore()
 
-    private let collection = "perfiles"
+    private let collectionUser = "users"
+    private let collectionProfile = "perfiles"
     
-    func getAllProfiles(completionBlock: @escaping (Result<[ProfileModel], Error>) -> Void){//PASO MI AUTHVM PARA VER TODOS LOS PROFILES DEL USUARIO
+    func getAllProfiles(completionBlock: @escaping (Result<[ProfileModel], Error>) -> Void){
         guard let uid = Auth.auth().currentUser?.uid else {return}
-        database.collection("users").document(uid).collection(collection)
+        database.collection(collectionUser).document(uid).collection(collectionProfile)
             .addSnapshotListener { query, error in
                 if let error = error{
                     completionBlock(.failure(error))

@@ -29,6 +29,10 @@
 		D3BE5DDB29F9667E00AF9E05 /* AuthenticationDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BE5DDA29F9667E00AF9E05 /* AuthenticationDatasource.swift */; };
 		D3BE5DDD29F9669300AF9E05 /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BE5DDC29F9669300AF9E05 /* AuthenticationRepository.swift */; };
 		D3BE5DDF29F9669D00AF9E05 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BE5DDE29F9669D00AF9E05 /* AuthenticationViewModel.swift */; };
+		D3BE5DE22A002E4E00AF9E05 /* ProfileDetailsTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BE5DE12A002E4E00AF9E05 /* ProfileDetailsTopView.swift */; };
+		D3BE5DE42A002F5E00AF9E05 /* ProfileDetailsPersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BE5DE32A002F5E00AF9E05 /* ProfileDetailsPersonalView.swift */; };
+		D3BE5DE62A00300600AF9E05 /* ProfileDetailsMedicalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BE5DE52A00300600AF9E05 /* ProfileDetailsMedicalView.swift */; };
+		D3BE5DEA2A00761D00AF9E05 /* ProfileDetailsContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BE5DE92A00761D00AF9E05 /* ProfileDetailsContactView.swift */; };
 		D3ED84E029B7E74B004F8421 /* LaunchScreenStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ED84DF29B7E74B004F8421 /* LaunchScreenStep.swift */; };
 		D3ED84E229B7E78F004F8421 /* LaunchScreenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ED84E129B7E78F004F8421 /* LaunchScreenManager.swift */; };
 		D3ED84E429B7E89D004F8421 /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ED84E329B7E89D004F8421 /* LaunchScreenView.swift */; };
@@ -59,6 +63,10 @@
 		D3BE5DDA29F9667E00AF9E05 /* AuthenticationDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationDatasource.swift; sourceTree = "<group>"; };
 		D3BE5DDC29F9669300AF9E05 /* AuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepository.swift; sourceTree = "<group>"; };
 		D3BE5DDE29F9669D00AF9E05 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		D3BE5DE12A002E4E00AF9E05 /* ProfileDetailsTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailsTopView.swift; sourceTree = "<group>"; };
+		D3BE5DE32A002F5E00AF9E05 /* ProfileDetailsPersonalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailsPersonalView.swift; sourceTree = "<group>"; };
+		D3BE5DE52A00300600AF9E05 /* ProfileDetailsMedicalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailsMedicalView.swift; sourceTree = "<group>"; };
+		D3BE5DE92A00761D00AF9E05 /* ProfileDetailsContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailsContactView.swift; sourceTree = "<group>"; };
 		D3ED84DF29B7E74B004F8421 /* LaunchScreenStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenStep.swift; sourceTree = "<group>"; };
 		D3ED84E129B7E78F004F8421 /* LaunchScreenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenManager.swift; sourceTree = "<group>"; };
 		D3ED84E329B7E89D004F8421 /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
@@ -178,6 +186,17 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
+		D3BE5DEB2A0079F800AF9E05 /* ProfileDetails */ = {
+			isa = PBXGroup;
+			children = (
+				D3BE5DE12A002E4E00AF9E05 /* ProfileDetailsTopView.swift */,
+				D3BE5DE32A002F5E00AF9E05 /* ProfileDetailsPersonalView.swift */,
+				D3BE5DE52A00300600AF9E05 /* ProfileDetailsMedicalView.swift */,
+				D3BE5DE92A00761D00AF9E05 /* ProfileDetailsContactView.swift */,
+			);
+			path = ProfileDetails;
+			sourceTree = "<group>";
+		};
 		D3ED84DE29B7E70A004F8421 /* LaunchScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +234,7 @@
 			children = (
 				D3EE277D299BFE0300C36E1F /* ProfileEntry.swift */,
 				D3EE277B299BF0B300C36E1F /* CircleImage.swift */,
+				D3BE5DEB2A0079F800AF9E05 /* ProfileDetails */,
 			);
 			path = "View Components";
 			sourceTree = "<group>";
@@ -305,10 +325,12 @@
 				D360FBAE29C881AA005A5A90 /* ProfileRepository.swift in Sources */,
 				D35638F829EAB7400061822E /* InfoView.swift in Sources */,
 				D363A72F29959D8E00E48105 /* Perfil_Salud_NFC.xcdatamodeld in Sources */,
+				D3BE5DE42A002F5E00AF9E05 /* ProfileDetailsPersonalView.swift in Sources */,
 				D3EE2780299C4D7B00C36E1F /* ProfileView.swift in Sources */,
 				D3ED84E229B7E78F004F8421 /* LaunchScreenManager.swift in Sources */,
 				D360FBAB29C8818F005A5A90 /* ProfileViewModel.swift in Sources */,
 				D3BE5DDF29F9669D00AF9E05 /* AuthenticationViewModel.swift in Sources */,
+				D3BE5DE62A00300600AF9E05 /* ProfileDetailsMedicalView.swift in Sources */,
 				D363A7392995A81500E48105 /* NFCView.swift in Sources */,
 				D3EE277C299BF0B300C36E1F /* CircleImage.swift in Sources */,
 				D363A7372995A80600E48105 /* ProfileDetailsView.swift in Sources */,
@@ -317,9 +339,11 @@
 				D363A72529959D8D00E48105 /* HomeView.swift in Sources */,
 				D3BE5DDB29F9667E00AF9E05 /* AuthenticationDatasource.swift in Sources */,
 				D35638FC29EACA9A0061822E /* AuthenticationView.swift in Sources */,
+				D3BE5DEA2A00761D00AF9E05 /* ProfileDetailsContactView.swift in Sources */,
 				D363A72329959D8D00E48105 /* Perfil_Salud_NFCApp.swift in Sources */,
 				D360FBB029C881BD005A5A90 /* ProfileDatasource.swift in Sources */,
 				D3ED84E429B7E89D004F8421 /* LaunchScreenView.swift in Sources */,
+				D3BE5DE22A002E4E00AF9E05 /* ProfileDetailsTopView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -45,7 +45,9 @@ struct CircleImage: View {
 
 struct CircleImage_Previews: PreviewProvider {
     static var previews: some View {
-        CircleImage(profile: ProfileModel(nombre: "", nfc: [], isFavorited: true,image: "S"), size:200)
+        CircleImage(profile: ProfileModel(isFavorited: true, nombre: "Samuel Damaso", image: "Samuel Dámaso", edad: "22 años", telefono: "606127186", direccion: "C/ Arroyo del Mojapán, 14", peso: "70", estatura: "1,80", sexo: "Masculino", grupoAndRh: "A+", alergias: ["polen", "ácaros"], medicacion: ["Pastillas alergia", "paracetamol"], enfermedades: ["ninguna"], tratamientos: ["ninguno"], antecedentes: ["cancer"], vacunas: ["covid-19"], donanteOrg: true, cirugiasPrev: ["ninguna"], implantes: ["ninguno"], embarazos: nil, partos: nil, contactos: ["mama": "60612341234", "papa": "908420934"]), size:200)
+        
+        
             .previewDevice("iPhone 11")
     }
 }

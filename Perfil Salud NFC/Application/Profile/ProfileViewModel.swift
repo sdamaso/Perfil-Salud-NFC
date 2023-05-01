@@ -8,8 +8,6 @@
 import Foundation
 
 final class ProfileViewModel: ObservableObject{
-    //OBSERVEDOBJECT AUTHVM
-    
     @Published var profiles: [ProfileModel] = []
     @Published var messageError: String?
     private let profileRepository: ProfileRepository
