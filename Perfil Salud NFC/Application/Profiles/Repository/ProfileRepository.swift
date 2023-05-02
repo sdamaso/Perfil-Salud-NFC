@@ -17,4 +17,16 @@ final class ProfileRepository{
     func getAllProfiles (completionBlock: @escaping (Result<[ProfileModel], Error>) -> Void){ //PASO MI AUTHVM PARA VER TODOS LOS PROFILES DEL USUARIO
         profileDatasource.getAllProfiles(completionBlock: completionBlock)
     }
+    
+    func createNewProfile (profile: ProfileModel, completionBlock: @escaping (Result<ProfileModel, Error>) -> Void){
+        profileDatasource.createNewProfile(profile: profile, completionBlock: completionBlock)
+    }
+    
+    func update (profile: ProfileModel){
+        profileDatasource.update(profile: profile)
+    }
+    
+    func delete (profile: ProfileModel){
+        profileDatasource.delete(profile: profile)
+    }
 }

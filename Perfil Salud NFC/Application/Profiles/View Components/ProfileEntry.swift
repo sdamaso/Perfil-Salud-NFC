@@ -19,7 +19,7 @@ struct ProfileEntry: View {
                 .padding()
             
             Spacer()
-            if profile.isFavorited ?? false{
+            if profile.isFavorited{
                 Image(systemName: "star.fill")
                     .padding()
                     .foregroundColor(Color.yellow)
@@ -30,7 +30,7 @@ struct ProfileEntry: View {
 
 struct ProfileEntry_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileEntry(profile: ProfileModel(isFavorited: true, nombre: "Samuel Damaso", image: "Samuel Dámaso", edad: "22 años", telefono: "606127186", direccion: "C/ Arroyo del Mojapán, 14", peso: "70", estatura: "1,80", sexo: "Masculino", grupoAndRh: "A+", alergias: ["polen", "ácaros"], medicacion: ["Pastillas alergia", "paracetamol"], enfermedades: ["ninguna"], tratamientos: ["ninguno"], antecedentes: ["cancer"], vacunas: ["covid-19"], donanteOrg: true, cirugiasPrev: ["ninguna"], implantes: ["ninguno"], embarazos: nil, partos: nil, contactos: ["mama": "60612341234", "papa": "908420934"]))
+        ProfileEntry(profile: ProfileModel(id: nil, isFavorited: true, nombre: "Samuel Damaso", image: "Samuel Damaso", edad: "22 años", telefono: "606127186", direccion: "C/ Arroyo del Mojapán, 14", peso: "70", estatura: "1,80", sexo: "Masculino", grupoAndRh: "A+", alergias: "Polen, Ácaros", medicacion: "", enfermedades: "", tratamientos: "", antecedentes: "Cancer, Afasia", vacunas: "Covid-19", donanteOrg: true, cirugiasPrev: "", implantes: "", embarazos: "nil", partos: "nil", contactos: ["Mama": "60612341234", "Papa": "908420934"]))
             .previewDevice("iPhone 11")
     }
 }

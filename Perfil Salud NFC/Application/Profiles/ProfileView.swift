@@ -10,6 +10,7 @@ import SwiftUI
 struct ProfileView: View {
     @ObservedObject var authenticationViewModel: AuthenticationViewModel
     @ObservedObject var profileViewModel: ProfileViewModel
+    
     @State private var addProfile = false
 
     var body: some View {
@@ -33,16 +34,24 @@ struct ProfileView: View {
                     }
                     .swipeActions(edge: .leading){
                         Button{
-                            print("Borrar")
+                            profileViewModel.delete(profile: profile)
                         }label: {
                             Image(systemName: "trash.fill")
                                 
                         }
                         .tint(Color.red)
                     }
+                    .swipeActions(edge: .trailing){
+                        Button{
+                            profileViewModel.updateIsFavorited(profile: profile)
+                        }label: {
+                            Image(systemName: "star.fill")
+                                
+                        }
+                        .tint(Color.yellow)
+                    }
                 }
             }
-            
             .task {
                 profileViewModel.getAllProfiles()
             }
@@ -62,18 +71,13 @@ struct ProfileView: View {
                         Image(systemName: "plus")
                     }
                 }
-                
-            
-                    
-                    
-                
-               
             }
             .navigationTitle("Perfiles")
             
             
             .sheet(isPresented: $addProfile){
                 //TODO: Create Profile View
+                ProfileCreationView(profileViewModel: profileViewModel)
 
             }
         }
