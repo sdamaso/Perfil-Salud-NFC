@@ -17,7 +17,6 @@ struct HomeView: View {
         
         TabView {
             ProfileView(authenticationViewModel: authenticationViewModel, profileViewModel: profileViewModel)
-            
                 .tabItem{
                     Image(systemName: "person.fill")
                     Text("Perfil")

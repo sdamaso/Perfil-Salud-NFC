@@ -45,7 +45,9 @@ struct NFCView: View {
                         }
                         else{
                             nfc.scanNFC()
-                            print(selection.count)
+                            selection.forEach({ id in
+                                print(id ?? "")
+                            })
                             selection.removeAll()
                             selectProfiles.toggle()
                         }

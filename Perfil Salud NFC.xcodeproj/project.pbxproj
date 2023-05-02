@@ -39,6 +39,8 @@
 		D3EE277C299BF0B300C36E1F /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EE277B299BF0B300C36E1F /* CircleImage.swift */; };
 		D3EE277E299BFE0300C36E1F /* ProfileEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EE277D299BFE0300C36E1F /* ProfileEntry.swift */; };
 		D3EE2780299C4D7B00C36E1F /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EE277F299C4D7B00C36E1F /* ProfileView.swift */; };
+		D3EE5F122A0176B500F8580B /* ProfileCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EE5F112A0176B500F8580B /* ProfileCreationView.swift */; };
+		D3EE5F142A0176C600F8580B /* ProfileEditingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EE5F132A0176C600F8580B /* ProfileEditingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +75,8 @@
 		D3EE277B299BF0B300C36E1F /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		D3EE277D299BFE0300C36E1F /* ProfileEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEntry.swift; sourceTree = "<group>"; };
 		D3EE277F299C4D7B00C36E1F /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		D3EE5F112A0176B500F8580B /* ProfileCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCreationView.swift; sourceTree = "<group>"; };
+		D3EE5F132A0176C600F8580B /* ProfileEditingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,7 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				D363A72429959D8D00E48105 /* HomeView.swift */,
-				D3EE2778299BF04D00C36E1F /* Profile */,
+				D3EE2778299BF04D00C36E1F /* Profiles */,
 				D3EE2779299BF06C00C36E1F /* NFC */,
 			);
 			path = Application;
@@ -186,7 +190,7 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
-		D3BE5DEB2A0079F800AF9E05 /* ProfileDetails */ = {
+		D3BE5DEB2A0079F800AF9E05 /* ProfileDetails Components */ = {
 			isa = PBXGroup;
 			children = (
 				D3BE5DE12A002E4E00AF9E05 /* ProfileDetailsTopView.swift */,
@@ -194,7 +198,7 @@
 				D3BE5DE52A00300600AF9E05 /* ProfileDetailsMedicalView.swift */,
 				D3BE5DE92A00761D00AF9E05 /* ProfileDetailsContactView.swift */,
 			);
-			path = ProfileDetails;
+			path = "ProfileDetails Components";
 			sourceTree = "<group>";
 		};
 		D3ED84DE29B7E70A004F8421 /* LaunchScreen */ = {
@@ -207,16 +211,17 @@
 			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
-		D3EE2778299BF04D00C36E1F /* Profile */ = {
+		D3EE2778299BF04D00C36E1F /* Profiles */ = {
 			isa = PBXGroup;
 			children = (
 				D3EE277F299C4D7B00C36E1F /* ProfileView.swift */,
-				D363A7362995A80600E48105 /* ProfileDetailsView.swift */,
+				D3EE5F102A01766E00F8580B /* Profile Modifier */,
+				D3EE5F0F2A01764C00F8580B /* Profile Details */,
 				D360FBAA29C8818F005A5A90 /* ProfileViewModel.swift */,
 				D360FBAC29C88193005A5A90 /* Repository */,
 				D3EE277A299BF08E00C36E1F /* View Components */,
 			);
-			path = Profile;
+			path = Profiles;
 			sourceTree = "<group>";
 		};
 		D3EE2779299BF06C00C36E1F /* NFC */ = {
@@ -234,9 +239,26 @@
 			children = (
 				D3EE277D299BFE0300C36E1F /* ProfileEntry.swift */,
 				D3EE277B299BF0B300C36E1F /* CircleImage.swift */,
-				D3BE5DEB2A0079F800AF9E05 /* ProfileDetails */,
 			);
 			path = "View Components";
+			sourceTree = "<group>";
+		};
+		D3EE5F0F2A01764C00F8580B /* Profile Details */ = {
+			isa = PBXGroup;
+			children = (
+				D363A7362995A80600E48105 /* ProfileDetailsView.swift */,
+				D3BE5DEB2A0079F800AF9E05 /* ProfileDetails Components */,
+			);
+			path = "Profile Details";
+			sourceTree = "<group>";
+		};
+		D3EE5F102A01766E00F8580B /* Profile Modifier */ = {
+			isa = PBXGroup;
+			children = (
+				D3EE5F112A0176B500F8580B /* ProfileCreationView.swift */,
+				D3EE5F132A0176C600F8580B /* ProfileEditingView.swift */,
+			);
+			path = "Profile Modifier";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,6 +343,7 @@
 			files = (
 				D3ED84E029B7E74B004F8421 /* LaunchScreenStep.swift in Sources */,
 				D3EE277E299BFE0300C36E1F /* ProfileEntry.swift in Sources */,
+				D3EE5F142A0176C600F8580B /* ProfileEditingView.swift in Sources */,
 				D363A72C29959D8E00E48105 /* Persistence.swift in Sources */,
 				D360FBAE29C881AA005A5A90 /* ProfileRepository.swift in Sources */,
 				D35638F829EAB7400061822E /* InfoView.swift in Sources */,
@@ -328,6 +351,7 @@
 				D3BE5DE42A002F5E00AF9E05 /* ProfileDetailsPersonalView.swift in Sources */,
 				D3EE2780299C4D7B00C36E1F /* ProfileView.swift in Sources */,
 				D3ED84E229B7E78F004F8421 /* LaunchScreenManager.swift in Sources */,
+				D3EE5F122A0176B500F8580B /* ProfileCreationView.swift in Sources */,
 				D360FBAB29C8818F005A5A90 /* ProfileViewModel.swift in Sources */,
 				D3BE5DDF29F9669D00AF9E05 /* AuthenticationViewModel.swift in Sources */,
 				D3BE5DE62A00300600AF9E05 /* ProfileDetailsMedicalView.swift in Sources */,

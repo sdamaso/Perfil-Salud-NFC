@@ -139,6 +139,9 @@ struct AuthenticationView: View {
                     
                     Button {
                         authenticationViewModel.login(email: email, password: password)
+                        email = ""
+                        password = ""
+                        authenticationViewModel.error = ""
                     } label: {
                         Text("Login")
                             .foregroundColor(.black)
@@ -176,6 +179,7 @@ struct AuthenticationView: View {
                     Text("¿No estas registrado?")
                     Button {
                         createAccount.toggle()
+                        authenticationViewModel.error = ""
                     } label: {
                         Text("Crea tu cuenta")
                             .foregroundColor(Color("Color Logo"))
