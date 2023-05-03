@@ -12,23 +12,22 @@ struct ProfileView: View {
     @ObservedObject var profileViewModel: ProfileViewModel
     
     @State private var addProfile = false
-
+    @State private var editProfile = false
+    
     var body: some View {
         NavigationView{
             List{
                 ForEach (profileViewModel.profiles) { profile in
-                   
+                    
                     NavigationLink{
                         ProfileDetailsView(profile: profile)
                             .navigationBarTitleDisplayMode(.inline)
                             .toolbar{
-                                Button{
-                                    //TODO: llamar a clase que cambie la vista para modificar los valores de los perfiles y actualizarlos en la bbdd
-                                }label:{
-                                    Text("Editar")
+                                NavigationLink ("Editar"){
+                                    ProfileEditingView(profileViewModel: profileViewModel, profile: profile)
                                 }
                             }
-                            
+                        
                     }label: {
                         ProfileEntry(profile: profile)
                     }
@@ -37,7 +36,7 @@ struct ProfileView: View {
                             profileViewModel.delete(profile: profile)
                         }label: {
                             Image(systemName: "trash.fill")
-                                
+                            
                         }
                         .tint(Color.red)
                     }
@@ -46,7 +45,7 @@ struct ProfileView: View {
                             profileViewModel.updateIsFavorited(profile: profile)
                         }label: {
                             Image(systemName: "star.fill")
-                                
+                            
                         }
                         .tint(Color.yellow)
                     }
@@ -78,12 +77,12 @@ struct ProfileView: View {
             .sheet(isPresented: $addProfile){
                 //TODO: Create Profile View
                 ProfileCreationView(profileViewModel: profileViewModel)
-
+                
             }
         }
         
     }
-        
+    
 }
 
 

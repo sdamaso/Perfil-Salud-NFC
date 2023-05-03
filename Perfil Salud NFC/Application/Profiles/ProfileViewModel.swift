@@ -39,6 +39,35 @@ final class ProfileViewModel: ObservableObject{
         }
     }
     
+    func update(profile: ProfileModel){
+        let updatedProfile = ProfileModel(id: profile.id ?? nil,
+                                          isFavorited: profile.isFavorited,
+                                          nombre: profile.nombre,
+                                          image: profile.image,
+                                          edad: profile.edad,
+                                          telefono: profile.telefono,
+                                          direccion: profile.direccion,
+                                          peso: profile.peso,
+                                          estatura: profile.estatura ,
+                                          sexo: profile.sexo,
+                                          grupoAndRh: profile.grupoAndRh,
+                                          alergias: profile.alergias,
+                                          medicacion: profile.medicacion,
+                                          enfermedades: profile.enfermedades,
+                                          tratamientos: profile.tratamientos,
+                                          antecedentes: profile.antecedentes,
+                                          vacunas: profile.vacunas,
+                                          donanteOrg: profile.donanteOrg,
+                                          cirugiasPrev: profile.cirugiasPrev,
+                                          implantes: profile.implantes,
+                                          embarazos: profile.embarazos,
+                                          partos: profile.partos,
+                                          contactos: profile.contactos)
+
+        profileRepository.update(profile: updatedProfile)
+        
+    }
+    
     func updateIsFavorited(profile: ProfileModel){
         var newFavorite = profile.isFavorited
         newFavorite.toggle()

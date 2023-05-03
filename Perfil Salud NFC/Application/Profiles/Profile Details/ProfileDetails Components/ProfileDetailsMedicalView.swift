@@ -143,19 +143,19 @@ struct ProfileDetailsMedicalView: View {
             }
             
             Group{
-                if profile.embarazos != "0"{
+                if (profile.embarazos != 0) {
                     Text("Embarazos")
                         .font(.footnote)
                         .padding(.top, 1)
-                    Text(profile.embarazos)
+                    Text(String(profile.embarazos))
                         .padding(.top, 1)
                 }
                 
-                if profile.partos != "0"{
+                if (profile.partos != 0){
                     Text("Partos")
                         .font(.footnote)
                         .padding(.top, 1)
-                    Text(profile.partos)
+                    Text(String(profile.partos))
                         .padding(.top, 1)
                 }
             }
@@ -166,6 +166,6 @@ struct ProfileDetailsMedicalView: View {
 
 struct ProfileDetailsMedicalView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileDetailsMedicalView(profile: ProfileModel(id: nil, isFavorited: true, nombre: "Samuel Damaso", image: "Samuel Damaso", edad: "22 años", telefono: "606127186", direccion: "C/ Arroyo del Mojapán, 14", peso: "70", estatura: "1,80", sexo: "Masculino", grupoAndRh: "A+", alergias: "Polen, Ácaros", medicacion: "", enfermedades: "", tratamientos: "", antecedentes: "Cancer, Afasia", vacunas: "Covid-19", donanteOrg: true, cirugiasPrev: "", implantes: "", embarazos: "nil", partos: "nil", contactos: ["Mama": "60612341234", "Papa": "908420934"]))
+        ProfileDetailsMedicalView(profile: ProfileModel(id: nil, isFavorited: true, nombre: "Samuel Damaso", image: "Samuel Damaso", edad: "22 años", telefono: "606127186", direccion: "C/ Arroyo del Mojapán, 14", peso: "70", estatura: "1,80", sexo: "Masculino", grupoAndRh: "A+", alergias: "Polen, Ácaros", medicacion: "", enfermedades: "", tratamientos: "", antecedentes: "Cancer, Afasia", vacunas: "Covid-19", donanteOrg: true, cirugiasPrev: "", implantes: "", embarazos: 0, partos: 0, contactos: ["Mama": "60612341234", "Papa": "908420934"]))
     }
 }

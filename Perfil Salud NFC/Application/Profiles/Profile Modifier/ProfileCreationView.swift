@@ -12,23 +12,17 @@ struct ProfileCreationView: View {
     @Environment(\.dismiss) var dismiss
     
     @State var edad: Date = Date()
-    @State var embarazos = 0
-    @State var partos = 0
     
     @State var n1 = ""
     @State var n2 = ""
     @State var n3 = ""
-    @State var n4 = ""
-    @State var n5 = ""
     @State var t1 = ""
     @State var t2 = ""
     @State var t3 = ""
-    @State var t4 = ""
-    @State var t5 = ""
     @State var contactos = 0
     
     
-    @State var profile: ProfileModel = ProfileModel(isFavorited: false, nombre: "", image: "", edad: "", telefono: "", direccion: "", peso: "", estatura: "", sexo: "Hombre", grupoAndRh: "A+", alergias: "", medicacion: "", enfermedades: "", tratamientos: "", antecedentes: "", vacunas: "", donanteOrg: false, cirugiasPrev: "", implantes: "", embarazos: "", partos: "", contactos: [:])
+    @State var profile: ProfileModel = ProfileModel(isFavorited: false, nombre: "", image: "", edad: "", telefono: "", direccion: "", peso: "", estatura: "", sexo: "Hombre", grupoAndRh: "A+", alergias: "", medicacion: "", enfermedades: "", tratamientos: "", antecedentes: "", vacunas: "", donanteOrg: false, cirugiasPrev: "", implantes: "", embarazos: 0, partos: 0, contactos: [:])
     
     
     
@@ -149,9 +143,9 @@ struct ProfileCreationView: View {
                     }
                     if profile.sexo == "Mujer"{
                         Section ("Maternidad"){
-                            Stepper("Embarazos:              \(embarazos)", value: $embarazos, in: 0...20)
+                            Stepper("Embarazos:              \(profile.embarazos)", value: $profile.embarazos, in: 0...20)
                                 .foregroundColor(Color("Color Logo"))
-                            Stepper("Partos:                      \(partos)", value: $partos, in: 0...20)
+                            Stepper("Partos:                      \(profile.partos)", value: $profile.partos, in: 0...20)
                                 .foregroundColor(Color("Color Logo"))
                         }
                     }
@@ -228,8 +222,6 @@ struct ProfileCreationView: View {
                             profile.contactos = [n1:t1,n2:t2,n3:t3]
                         }
                         profile.edad = String(components.year!)
-                        profile.embarazos = String(embarazos)
-                        profile.partos = String(partos)
                         profileViewModel.createNewProfile(profile: profile)
                         dismiss()
                     } label: {

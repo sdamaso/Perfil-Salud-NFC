@@ -33,8 +33,8 @@ struct ProfileModel: Decodable, Encodable, Identifiable, Hashable{
     var donanteOrg: Bool
     var cirugiasPrev: String
     var implantes: String
-    var embarazos: String
-    var partos: String
+    var embarazos: Int
+    var partos: Int
 
     var contactos: [String:String]
 }
