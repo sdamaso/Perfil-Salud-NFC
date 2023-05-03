@@ -18,12 +18,22 @@ struct ProfileEditingView: View {
     @State var t2 = ""
     @State var t3 = ""
     
+    @State private var changeImage = false
+    
     var body: some View {
         NavigationView {
             VStack{
-                Rectangle()
-                    .frame(width: 100, height: 100, alignment: .center)
-                    .cornerRadius(50)
+                Button {
+                    changeImage.toggle()
+                }label: {
+                    ZStack {
+                        CircleImage(profile: profile, size: 100)
+                        Image(systemName: "plus.circle.fill")
+                            .foregroundColor(.gray)
+                            .offset(x: 45,y:40)
+                            .font(.system(size: 25))
+                    }
+                }
                 Form{
                     Section("Datos Personales") {
                         VStack(alignment: .leading){
@@ -181,6 +191,9 @@ struct ProfileEditingView: View {
                     }
                 }
             }
+            .sheet(isPresented: $changeImage, content: {
+                PhotoPicker(profile: $profile)
+            })
             .toolbar {
                 ToolbarItem(placement: .bottomBar){
                     Button {

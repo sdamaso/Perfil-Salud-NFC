@@ -21,17 +21,25 @@ struct ProfileCreationView: View {
     @State var t3 = ""
     @State var contactos = 0
     
+    @State private var changeImage = false
+    
     
     @State var profile: ProfileModel = ProfileModel(isFavorited: false, nombre: "", image: "", edad: "", telefono: "", direccion: "", peso: "", estatura: "", sexo: "Hombre", grupoAndRh: "A+", alergias: "", medicacion: "", enfermedades: "", tratamientos: "", antecedentes: "", vacunas: "", donanteOrg: false, cirugiasPrev: "", implantes: "", embarazos: 0, partos: 0, contactos: [:])
-    
-    
     
     var body: some View {
         NavigationView {
             VStack{
-                Rectangle()
-                    .frame(width: 150, height: 150, alignment: .center)
-                    .cornerRadius(75)
+                Button {
+                    changeImage.toggle()
+                }label: {
+                    ZStack {
+                        CircleImage(profile: profile, size: 100)
+                        Image(systemName: "plus.circle.fill")
+                            .foregroundColor(.gray)
+                            .offset(x: 45,y:40)
+                            .font(.system(size: 25))
+                    }
+                }
                 Form{
                     Section("Datos Personales") {
                         VStack(alignment: .leading){
@@ -235,6 +243,9 @@ struct ProfileCreationView: View {
                         Text("Cancelar")
                     }
                 }
+            }
+            .sheet(isPresented: $changeImage) {
+                PhotoPicker(profile: $profile)
             }
             
         }

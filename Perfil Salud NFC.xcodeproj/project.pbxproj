@@ -26,6 +26,9 @@
 		D363A72F29959D8E00E48105 /* Perfil_Salud_NFC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D363A72D29959D8E00E48105 /* Perfil_Salud_NFC.xcdatamodeld */; };
 		D363A7372995A80600E48105 /* ProfileDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D363A7362995A80600E48105 /* ProfileDetailsView.swift */; };
 		D363A7392995A81500E48105 /* NFCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D363A7382995A81500E48105 /* NFCView.swift */; };
+		D36C45BA2A02AC6600344B62 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = D36C45B92A02AC6600344B62 /* SDWebImageSwiftUI */; };
+		D36C45BC2A02B2B300344B62 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36C45BB2A02B2B300344B62 /* PhotoPicker.swift */; };
+		D36C45BE2A02B8EC00344B62 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = D36C45BD2A02B8EC00344B62 /* FirebaseStorage */; };
 		D3BE5DDB29F9667E00AF9E05 /* AuthenticationDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BE5DDA29F9667E00AF9E05 /* AuthenticationDatasource.swift */; };
 		D3BE5DDD29F9669300AF9E05 /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BE5DDC29F9669300AF9E05 /* AuthenticationRepository.swift */; };
 		D3BE5DDF29F9669D00AF9E05 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BE5DDE29F9669D00AF9E05 /* AuthenticationViewModel.swift */; };
@@ -61,6 +64,7 @@
 		D363A72E29959D8E00E48105 /* Perfil_Salud_NFC.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Perfil_Salud_NFC.xcdatamodel; sourceTree = "<group>"; };
 		D363A7362995A80600E48105 /* ProfileDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailsView.swift; sourceTree = "<group>"; };
 		D363A7382995A81500E48105 /* NFCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCView.swift; sourceTree = "<group>"; };
+		D36C45BB2A02B2B300344B62 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
 		D3B1FE3629AE95D10082250C /* Perfil-Salud-NFC-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Perfil-Salud-NFC-Info.plist"; sourceTree = SOURCE_ROOT; };
 		D3BE5DDA29F9667E00AF9E05 /* AuthenticationDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationDatasource.swift; sourceTree = "<group>"; };
 		D3BE5DDC29F9669300AF9E05 /* AuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepository.swift; sourceTree = "<group>"; };
@@ -84,10 +88,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D36C45BA2A02AC6600344B62 /* SDWebImageSwiftUI in Frameworks */,
 				D33F6B8529AC09EB00C8A596 /* FirebaseFirestore in Frameworks */,
 				D33F6B7F29AC09EB00C8A596 /* FirebaseCrashlytics in Frameworks */,
 				D33F6B8929AC09EB00C8A596 /* FirebaseFirestoreSwift in Frameworks */,
 				D356390229EB1B7D0061822E /* FirebaseAuth in Frameworks */,
+				D36C45BE2A02B8EC00344B62 /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +245,7 @@
 			children = (
 				D3EE277D299BFE0300C36E1F /* ProfileEntry.swift */,
 				D3EE277B299BF0B300C36E1F /* CircleImage.swift */,
+				D36C45BB2A02B2B300344B62 /* PhotoPicker.swift */,
 			);
 			path = "View Components";
 			sourceTree = "<group>";
@@ -282,6 +289,8 @@
 				D33F6B8429AC09EB00C8A596 /* FirebaseFirestore */,
 				D33F6B8829AC09EB00C8A596 /* FirebaseFirestoreSwift */,
 				D356390129EB1B7D0061822E /* FirebaseAuth */,
+				D36C45B92A02AC6600344B62 /* SDWebImageSwiftUI */,
+				D36C45BD2A02B8EC00344B62 /* FirebaseStorage */,
 			);
 			productName = "Perfil Salud NFC";
 			productReference = D363A71F29959D8D00E48105 /* Perfil Salud NFC.app */;
@@ -313,6 +322,7 @@
 			mainGroup = D363A71629959D8D00E48105;
 			packageReferences = (
 				D33F6B7D29AC09EB00C8A596 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				D36C45B82A02AC6600344B62 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = D363A72029959D8D00E48105 /* Products */;
 			projectDirPath = "";
@@ -341,6 +351,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D36C45BC2A02B2B300344B62 /* PhotoPicker.swift in Sources */,
 				D3ED84E029B7E74B004F8421 /* LaunchScreenStep.swift in Sources */,
 				D3EE277E299BFE0300C36E1F /* ProfileEntry.swift in Sources */,
 				D3EE5F142A0176C600F8580B /* ProfileEditingView.swift in Sources */,
@@ -589,6 +600,14 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		D36C45B82A02AC6600344B62 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -611,6 +630,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D33F6B7D29AC09EB00C8A596 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
+		};
+		D36C45B92A02AC6600344B62 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D36C45B82A02AC6600344B62 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		D36C45BD2A02B8EC00344B62 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D33F6B7D29AC09EB00C8A596 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
 		};
 /* End XCSwiftPackageProductDependency section */
 
