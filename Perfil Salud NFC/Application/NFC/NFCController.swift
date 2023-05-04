@@ -8,7 +8,7 @@
 import Foundation
 import CoreNFC
 
-class NFCController: NSObject, NFCTagReaderSessionDelegate{
+class NFCController: NSObject, NFCTagReaderSessionDelegate{ 
     var session: NFCReaderSession?
     var UID: String?
 
@@ -18,8 +18,8 @@ class NFCController: NSObject, NFCTagReaderSessionDelegate{
         print("Se comienza una sesión de lectura")
     }
 
-    func scanNFC() {
-        self.session = NFCTagReaderSession(pollingOption: .iso14443, delegate: self, queue: nil)
+    func scanNFC() async {
+        self.session =  NFCTagReaderSession(pollingOption: .iso14443, delegate: self, queue: nil)
         self.session?.alertMessage = "Acerque el iPhone al tag NFC"
         self.session?.begin()
     }

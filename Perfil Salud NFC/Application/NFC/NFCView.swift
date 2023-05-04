@@ -9,11 +9,13 @@ import SwiftUI
 
 struct NFCView: View {
     @ObservedObject var profileViewModel: ProfileViewModel
+    @StateObject var nfcViewModel: NFCViewModel = NFCViewModel()
     @State private var showInfo = false
     @State private var selectProfiles = false
+    @State private var profileEncontrados = false
     @State var selection = Set<ProfileModel.ID>()
     var nfc = NFCController()
-
+    
     
     var selectProfile: some View{
         NavigationView{
@@ -44,7 +46,10 @@ struct NFCView: View {
                             selectProfiles.toggle()
                         }
                         else{
-                            nfc.scanNFC()
+                            Task{
+                                await nfc.scanNFC()
+                            }
+                            print(nfc.UID ?? "")
                             selection.forEach({ id in
                                 print(id ?? "")
                             })
@@ -96,26 +101,78 @@ struct NFCView: View {
                     .padding()
                     
                     Button {
-                        nfc.scanNFC()
-//                        showProfiles.toggle()
-                        print("El UID extraido es: \(nfc.UID ?? "None")")
+                        Task{
+                            await nfc.scanNFC()
+                        }
+                    } label: {
+                        Image(systemName: "magnifyingglass")
+                            .font(.system(size: 25))
+                        Text("Escanear tarjeta NFC")
                     }
-                label: {
-                    Image(systemName: "magnifyingglass")
-                        .font(.system(size: 25))
-                    Text("Escanear tarjeta NFC")
-                }
+                    
+                    
+                    Button {
+//                        nfcViewModel.getNFCProfiles(nfcUid: nfc.UID!)
+                        profileEncontrados.toggle()
+                    } label: {
+                        Image(systemName: "magnifyingglass")
+                            .font(.system(size: 25))
+                        Text("Escanear tarjeta NFC")
+                    }
+                    .padding(.top, 50)
                 }
                 Spacer()
             }
+            
+            .task {
+                nfcViewModel.getNFCProfiles(nfcUid: nfc.UID ?? "04fa75a5100289")
+            }
             .navigationTitle("Escaner de NFC")
             .sheet(isPresented: $showInfo){
-                InfoView()
+                NFCInfoView()
             }
             .sheet(isPresented: $selectProfiles){
                 selectProfile
                     .presentationDetents([.medium, .large])
             }
+            .fullScreenCover(isPresented: $profileEncontrados){
+                NavigationView{
+                    List{
+                        ForEach (nfcViewModel.perfiles) { profile in
+                            
+                            NavigationLink{
+                                ProfileDetailsView(profile: profile)
+                                    .navigationBarTitleDisplayMode(.inline)
+                                    .toolbar{
+                                        NavigationLink ("Editar"){
+                                            ProfileEditingView(profileViewModel: profileViewModel, profile: profile)
+                                        }
+                                    }
+                                
+                            }label: {
+                                ProfileEntry(profile: profile)
+                            }
+                        }
+                    }
+                    .task {
+                        nfcViewModel.getNFCProfiles(nfcUid: nfc.UID ?? "04fa75a5100289")
+                    }
+                    .toolbar{
+                        ToolbarItem (placement: .navigationBarLeading){
+                            Button{
+                                
+                            } label: {
+                                Image(systemName: "rectangle.portrait.and.arrow.right")
+                            }
+                        }
+                        
+                        
+                    }
+                    .navigationTitle("Perfiles NFC")
+                }
+                
+            }
+            
             
         }
     }

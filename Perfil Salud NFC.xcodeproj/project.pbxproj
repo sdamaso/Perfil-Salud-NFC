@@ -11,7 +11,7 @@
 		D33F6B7F29AC09EB00C8A596 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = D33F6B7E29AC09EB00C8A596 /* FirebaseCrashlytics */; };
 		D33F6B8529AC09EB00C8A596 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D33F6B8429AC09EB00C8A596 /* FirebaseFirestore */; };
 		D33F6B8929AC09EB00C8A596 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D33F6B8829AC09EB00C8A596 /* FirebaseFirestoreSwift */; };
-		D35638F829EAB7400061822E /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35638F729EAB7400061822E /* InfoView.swift */; };
+		D35638F829EAB7400061822E /* NFCInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35638F729EAB7400061822E /* NFCInfoView.swift */; };
 		D35638FC29EACA9A0061822E /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35638FB29EACA9A0061822E /* AuthenticationView.swift */; };
 		D356390229EB1B7D0061822E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D356390129EB1B7D0061822E /* FirebaseAuth */; };
 		D35D6A1C29C2368000D7B1F5 /* NFCController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35D6A1B29C2368000D7B1F5 /* NFCController.swift */; };
@@ -29,6 +29,9 @@
 		D36C45BA2A02AC6600344B62 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = D36C45B92A02AC6600344B62 /* SDWebImageSwiftUI */; };
 		D36C45BC2A02B2B300344B62 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36C45BB2A02B2B300344B62 /* PhotoPicker.swift */; };
 		D36C45BE2A02B8EC00344B62 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = D36C45BD2A02B8EC00344B62 /* FirebaseStorage */; };
+		D36C45C02A02CB8800344B62 /* NFCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36C45BF2A02CB8800344B62 /* NFCViewModel.swift */; };
+		D36C45C22A02CB9200344B62 /* NFCRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36C45C12A02CB9200344B62 /* NFCRepository.swift */; };
+		D36C45C42A02CB9B00344B62 /* NFCDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36C45C32A02CB9B00344B62 /* NFCDatasource.swift */; };
 		D3BE5DDB29F9667E00AF9E05 /* AuthenticationDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BE5DDA29F9667E00AF9E05 /* AuthenticationDatasource.swift */; };
 		D3BE5DDD29F9669300AF9E05 /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BE5DDC29F9669300AF9E05 /* AuthenticationRepository.swift */; };
 		D3BE5DDF29F9669D00AF9E05 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BE5DDE29F9669D00AF9E05 /* AuthenticationViewModel.swift */; };
@@ -48,7 +51,7 @@
 
 /* Begin PBXFileReference section */
 		D33F6B7B29AC076200C8A596 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
-		D35638F729EAB7400061822E /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		D35638F729EAB7400061822E /* NFCInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCInfoView.swift; sourceTree = "<group>"; };
 		D35638FB29EACA9A0061822E /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		D35D6A1A29C0D63800D7B1F5 /* Perfil Salud NFC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Perfil Salud NFC.entitlements"; sourceTree = "<group>"; };
 		D35D6A1B29C2368000D7B1F5 /* NFCController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCController.swift; sourceTree = "<group>"; };
@@ -65,6 +68,9 @@
 		D363A7362995A80600E48105 /* ProfileDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailsView.swift; sourceTree = "<group>"; };
 		D363A7382995A81500E48105 /* NFCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCView.swift; sourceTree = "<group>"; };
 		D36C45BB2A02B2B300344B62 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
+		D36C45BF2A02CB8800344B62 /* NFCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCViewModel.swift; sourceTree = "<group>"; };
+		D36C45C12A02CB9200344B62 /* NFCRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCRepository.swift; sourceTree = "<group>"; };
+		D36C45C32A02CB9B00344B62 /* NFCDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCDatasource.swift; sourceTree = "<group>"; };
 		D3B1FE3629AE95D10082250C /* Perfil-Salud-NFC-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Perfil-Salud-NFC-Info.plist"; sourceTree = SOURCE_ROOT; };
 		D3BE5DDA29F9667E00AF9E05 /* AuthenticationDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationDatasource.swift; sourceTree = "<group>"; };
 		D3BE5DDC29F9669300AF9E05 /* AuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepository.swift; sourceTree = "<group>"; };
@@ -113,7 +119,7 @@
 		D35638F629EAB7260061822E /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				D35638F729EAB7400061822E /* InfoView.swift */,
+				D35638F729EAB7400061822E /* NFCInfoView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -187,6 +193,15 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
+		D36C45C52A02CBA100344B62 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				D36C45C12A02CB9200344B62 /* NFCRepository.swift */,
+				D36C45C32A02CB9B00344B62 /* NFCDatasource.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		D3BE5DE029F966A700AF9E05 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,9 +236,9 @@
 			isa = PBXGroup;
 			children = (
 				D3EE277F299C4D7B00C36E1F /* ProfileView.swift */,
+				D360FBAA29C8818F005A5A90 /* ProfileViewModel.swift */,
 				D3EE5F102A01766E00F8580B /* Profile Modifier */,
 				D3EE5F0F2A01764C00F8580B /* Profile Details */,
-				D360FBAA29C8818F005A5A90 /* ProfileViewModel.swift */,
 				D360FBAC29C88193005A5A90 /* Repository */,
 				D3EE277A299BF08E00C36E1F /* View Components */,
 			);
@@ -235,6 +250,8 @@
 			children = (
 				D363A7382995A81500E48105 /* NFCView.swift */,
 				D35D6A1B29C2368000D7B1F5 /* NFCController.swift */,
+				D36C45BF2A02CB8800344B62 /* NFCViewModel.swift */,
+				D36C45C52A02CBA100344B62 /* Repository */,
 				D35638F629EAB7260061822E /* Components */,
 			);
 			path = NFC;
@@ -357,13 +374,16 @@
 				D3EE5F142A0176C600F8580B /* ProfileEditingView.swift in Sources */,
 				D363A72C29959D8E00E48105 /* Persistence.swift in Sources */,
 				D360FBAE29C881AA005A5A90 /* ProfileRepository.swift in Sources */,
-				D35638F829EAB7400061822E /* InfoView.swift in Sources */,
+				D35638F829EAB7400061822E /* NFCInfoView.swift in Sources */,
 				D363A72F29959D8E00E48105 /* Perfil_Salud_NFC.xcdatamodeld in Sources */,
 				D3BE5DE42A002F5E00AF9E05 /* ProfileDetailsPersonalView.swift in Sources */,
+				D36C45C02A02CB8800344B62 /* NFCViewModel.swift in Sources */,
 				D3EE2780299C4D7B00C36E1F /* ProfileView.swift in Sources */,
+				D36C45C22A02CB9200344B62 /* NFCRepository.swift in Sources */,
 				D3ED84E229B7E78F004F8421 /* LaunchScreenManager.swift in Sources */,
 				D3EE5F122A0176B500F8580B /* ProfileCreationView.swift in Sources */,
 				D360FBAB29C8818F005A5A90 /* ProfileViewModel.swift in Sources */,
+				D36C45C42A02CB9B00344B62 /* NFCDatasource.swift in Sources */,
 				D3BE5DDF29F9669D00AF9E05 /* AuthenticationViewModel.swift in Sources */,
 				D3BE5DE62A00300600AF9E05 /* ProfileDetailsMedicalView.swift in Sources */,
 				D363A7392995A81500E48105 /* NFCView.swift in Sources */,
