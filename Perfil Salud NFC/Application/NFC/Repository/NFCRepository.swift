@@ -18,4 +18,12 @@ final class NFCRepository{
         nfcDatasource.getNFCProfiles(nfcUid: nfcUid, completionBlock: completionBlock)
     }
     
+    func getNFCModel (nfcUid: String, completionBlock: @escaping (Result<NFCModel, Error>) -> Void){
+        nfcDatasource.getNFCModel(nfcUid: nfcUid, completionBlock: completionBlock)
+    }
+    
+    func createNewNFC (nfcID: String, nfc: NFCModel, completionBlock: @escaping (Result<NFCModel, Error>) -> Void){
+        nfcDatasource.createNewNFC(nfcID: nfcID, nfc: nfc, completionBlock: completionBlock)
+    }
+    
 }

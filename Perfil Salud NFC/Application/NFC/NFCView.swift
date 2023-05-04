@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct NFCView: View {
     @ObservedObject var profileViewModel: ProfileViewModel
@@ -14,8 +15,9 @@ struct NFCView: View {
     @State private var selectProfiles = false
     @State private var profileEncontrados = false
     @State var selection = Set<ProfileModel.ID>()
+    @State var perfilesGuardados: [String] = []
+    @State var idNFC = ""
     var nfc = NFCController()
-    
     
     var selectProfile: some View{
         NavigationView{
@@ -42,19 +44,23 @@ struct NFCView: View {
             .toolbar{
                 ToolbarItem{
                     Button{
-                        if selection.isEmpty{
-                            selectProfiles.toggle()
-                        }
-                        else{
-                            Task{
-                                await nfc.scanNFC()
+                        guard let userUID = Auth.auth().currentUser?.uid else {return}
+                        if idNFC != ""{
+                            if selection.isEmpty{
+                                selectProfiles.toggle()
                             }
-                            print(nfc.UID ?? "")
-                            selection.forEach({ id in
-                                print(id ?? "")
-                            })
-                            selection.removeAll()
-                            selectProfiles.toggle()
+                            else{
+                                selection.forEach({ id in
+                                    perfilesGuardados.append(String(id!))
+                                })
+                                let newNFC = NFCModel(nfcUID: idNFC, userUID: userUID, perfiles: perfilesGuardados)
+                                
+                                nfcViewModel.createNewNFC(nfcID: idNFC,nfc: newNFC)
+                                
+                                selection.removeAll()
+                                perfilesGuardados.removeAll()
+                                selectProfiles.toggle()
+                            }
                         }
                     } label:{
                         Text("Guardar")
@@ -91,6 +97,7 @@ struct NFCView: View {
                 
                 VStack {
                     Button {
+                        idNFC = nfc.UID ?? ""
                         selectProfiles.toggle()
                         selection.removeAll()
                     } label: {
@@ -101,8 +108,8 @@ struct NFCView: View {
                     .padding()
                     
                     Button {
-                        Task{
-                            await nfc.scanNFC()
+                        if nfc.UID != nil{
+                            profileEncontrados.toggle()
                         }
                     } label: {
                         Image(systemName: "magnifyingglass")
@@ -110,22 +117,23 @@ struct NFCView: View {
                         Text("Escanear tarjeta NFC")
                     }
                     
-                    
                     Button {
-//                        nfcViewModel.getNFCProfiles(nfcUid: nfc.UID!)
-                        profileEncontrados.toggle()
+                        nfc.scanNFC()
                     } label: {
-                        Image(systemName: "magnifyingglass")
-                            .font(.system(size: 25))
-                        Text("Escanear tarjeta NFC")
+                        HStack{
+                            Image(systemName: "link.circle.fill")
+                                .font(.system(size: 25))
+                                .foregroundColor(Color.blue)
+                            Text("Enlazar tarjeta NFC")
+                                .foregroundColor(Color.blue)
+                        }
+                        .padding()
+                        .background(Color("Color Logo"))
+                        .cornerRadius(25)
                     }
-                    .padding(.top, 50)
+                    .padding(.top, 130)
                 }
                 Spacer()
-            }
-            
-            .task {
-                nfcViewModel.getNFCProfiles(nfcUid: nfc.UID ?? "04fa75a5100289")
             }
             .navigationTitle("Escaner de NFC")
             .sheet(isPresented: $showInfo){
@@ -138,31 +146,26 @@ struct NFCView: View {
             .fullScreenCover(isPresented: $profileEncontrados){
                 NavigationView{
                     List{
-                        ForEach (nfcViewModel.perfiles) { profile in
-                            
-                            NavigationLink{
-                                ProfileDetailsView(profile: profile)
-                                    .navigationBarTitleDisplayMode(.inline)
-                                    .toolbar{
-                                        NavigationLink ("Editar"){
-                                            ProfileEditingView(profileViewModel: profileViewModel, profile: profile)
-                                        }
-                                    }
-                                
-                            }label: {
-                                ProfileEntry(profile: profile)
+                        ForEach (nfcViewModel.userProfiles) { profile in
+                            if nfcViewModel.savedProfiles.contains(profile.id!){
+                                NavigationLink{
+                                    ProfileDetailsView(profile: profile)
+                                        .navigationBarTitleDisplayMode(.inline)                                   
+                                }label: {
+                                    ProfileEntry(profile: profile)
+                                }
                             }
                         }
                     }
                     .task {
-                        nfcViewModel.getNFCProfiles(nfcUid: nfc.UID ?? "04fa75a5100289")
+                        nfcViewModel.getNFCProfiles(nfcUid: nfc.UID!)
                     }
                     .toolbar{
                         ToolbarItem (placement: .navigationBarLeading){
                             Button{
-                                
+                                profileEncontrados.toggle()
                             } label: {
-                                Image(systemName: "rectangle.portrait.and.arrow.right")
+                                Text("Cerrar")
                             }
                         }
                         

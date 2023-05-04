@@ -18,7 +18,7 @@ class NFCController: NSObject, NFCTagReaderSessionDelegate{
         print("Se comienza una sesión de lectura")
     }
 
-    func scanNFC() async {
+    func scanNFC(){
         self.session =  NFCTagReaderSession(pollingOption: .iso14443, delegate: self, queue: nil)
         self.session?.alertMessage = "Acerque el iPhone al tag NFC"
         self.session?.begin()
