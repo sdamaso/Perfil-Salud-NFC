@@ -168,15 +168,10 @@ struct NFCView: View {
                                 Text("Cerrar")
                             }
                         }
-                        
-                        
                     }
-                    .navigationTitle("Perfiles NFC")
+                    .navigationTitle("Perfiles guardados en NFC")
                 }
-                
             }
-            
-            
         }
     }
     

@@ -41,7 +41,6 @@ struct ProfileEditingView: View {
                                 .foregroundColor(Color("Color Logo"))
                             TextField("Nombre y apellidos", text: $profile.nombre)
                         }
-                        
                         VStack(alignment: .leading){
                             Text("Edad")
                                 .foregroundColor(Color("Color Logo"))
@@ -213,23 +212,14 @@ struct ProfileEditingView: View {
                     }
                 }
             }
-            
         }
         .navigationTitle(profile.nombre)
-        
     }
 }
 
-extension Dictionary{
-    subscript(i:Int) -> (key:Key, value:Value){
-        get{
-            return self[index(startIndex, offsetBy: i)];
-        }
-    }
-}
 
 struct ProfileEditingView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileEditingView(profileViewModel: ProfileViewModel(), profile: ProfileModel(id: nil, isFavorited: true, nombre: "Samuel Damaso", image: "Samuel Damaso", edad: "22 años", telefono: "606127186", direccion: "C/ Arroyo del Mojapán, 14", peso: "70", estatura: "1,80", sexo: "Masculino", grupoAndRh: "A+", alergias: "Polen, Ácaros", medicacion: "", enfermedades: "", tratamientos: "", antecedentes: "Cancer, Afasia", vacunas: "Covid-19", donanteOrg: true, cirugiasPrev: "", implantes: "", embarazos: 2, partos: 1, contactos: ["Mama": "60612341234", "Papa": "908420934"]))
+        ProfileEditingView(profileViewModel: ProfileViewModel(), profile: ProfileModel(id: nil, isFavorited: false, nombre: "", image: "", edad: "", telefono: "", direccion: "", peso: "", estatura: "", sexo: "Prefiero no decirlo", grupoAndRh: "A+", alergias: "", medicacion: "", enfermedades: "", tratamientos: "", antecedentes: "", vacunas: "", donanteOrg: false, cirugiasPrev: "", implantes: "", embarazos: 0, partos: 0, contactos: [:]))
     }
 }

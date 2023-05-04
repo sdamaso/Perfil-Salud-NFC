@@ -14,13 +14,11 @@ struct HomeView: View {
     @StateObject var profileViewModel: ProfileViewModel = ProfileViewModel()
     
     var body: some View {
-        
         TabView {
             ProfileView(authenticationViewModel: authenticationViewModel, profileViewModel: profileViewModel)
                 .tabItem{
                     Image(systemName: "person.fill")
                     Text("Perfil")
-                        
                 }
                                 
             NFCView(profileViewModel: profileViewModel)
@@ -32,6 +30,9 @@ struct HomeView: View {
         .task {
             try? await Task.sleep(for: Duration.seconds(3))
             self.launchScreenState.dismiss()
+        }
+        .task {
+            profileViewModel.getAllProfiles()
         }
     }
 }

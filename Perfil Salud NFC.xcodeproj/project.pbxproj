@@ -237,8 +237,8 @@
 			children = (
 				D3EE277F299C4D7B00C36E1F /* ProfileView.swift */,
 				D360FBAA29C8818F005A5A90 /* ProfileViewModel.swift */,
-				D3EE5F102A01766E00F8580B /* Profile Modifier */,
 				D3EE5F0F2A01764C00F8580B /* Profile Details */,
+				D3EE5F102A01766E00F8580B /* Profile Modifier */,
 				D360FBAC29C88193005A5A90 /* Repository */,
 				D3EE277A299BF08E00C36E1F /* View Components */,
 			);

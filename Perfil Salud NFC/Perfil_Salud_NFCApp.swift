@@ -41,4 +41,3 @@ struct Perfil_Salud_NFCApp: App {
         }
     }
 }
-

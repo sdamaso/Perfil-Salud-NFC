@@ -34,7 +34,6 @@ final class ProfileViewModel: ObservableObject{
                 print("Se ha subido correctamente el nuevo perfil: \(profile.nombre)")
             case .failure(let error):
                 self?.messageError = error.localizedDescription
-                
             }
         }
     }
@@ -65,13 +64,11 @@ final class ProfileViewModel: ObservableObject{
                                           contactos: profile.contactos)
 
         profileRepository.update(profile: updatedProfile)
-        
     }
     
     func updateIsFavorited(profile: ProfileModel){
         var newFavorite = profile.isFavorited
         newFavorite.toggle()
-    
         
         let updatedProfile = ProfileModel(id: profile.id ?? nil,
                                           isFavorited: newFavorite,
@@ -98,7 +95,6 @@ final class ProfileViewModel: ObservableObject{
                                           contactos: profile.contactos)
 
         profileRepository.update(profile: updatedProfile)
-        
     }
     
     func delete (profile: ProfileModel){

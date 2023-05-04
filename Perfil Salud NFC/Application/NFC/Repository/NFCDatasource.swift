@@ -44,8 +44,6 @@ final class NFCDatasource{
             case .failure(let error):
                 print(error.localizedDescription)
                 completionBlock(.failure(error))
-                
-                
             }
         }
     }
@@ -73,69 +71,4 @@ final class NFCDatasource{
         }
     }
 }
-
-
-//    func getNFCProfiles(nfcUid: String, completionBlock: @escaping (Result<[ProfileModel], Error>) -> Void){
-////        var perfiles: [ProfileModel] = []
-//        getNFCProfilesAUX(nfcUid: nfcUid) { result in
-//            switch result{
-//            case .success(let nfc):
-//                print("obtenido \(nfc.userUID)")
-//                let uid = nfc.userUID
-//
-//                self.database.collection("users").document(uid).collection("perfiles").whereField("id", arrayContainsAny: nfc.perfiles).addSnapshotListener { query, error in
-//                    if let error = error{
-//                        completionBlock(.failure(error))
-//                        return
-//                    }
-//                    guard let documents = query?.documents.compactMap ({ $0 }) else{
-//                        completionBlock(.success([]))
-//                        return
-//                    }
-//                    let profiles = documents.map { try? $0.data(as: ProfileModel.self)}
-//                        .compactMap { $0 }
-//                    completionBlock(.success(profiles))
-//                }
-////                let perfilRef = self.database.collection("users").document(uid).collection("perfiles").whereField("id", arrayContainsAny: nfc.perfiles).add
-////                perfilRef.getDocuments(completion: { query, err in
-////                    <#code#>
-////                })
-////
-//
-////                (as: ProfileModel.self){ result in
-////                    do{
-////                        perfiles.append(try result.get())
-////                    } catch{
-////
-////                    }
-//
-////                for perfil in nfc.perfiles{
-////                    perfiles.append(self.getNFCProfilesAUX2(nfc: uid, perfil: perfil))
-////                }
-////                print("DS: \(perfiles.first?.nombre ?? "EROR")")
-////                completionBlock(.success(perfiles))
-//            case .failure(let error):
-//                print(error.localizedDescription)
-//                completionBlock(.failure(error))
-//            }
-//        }
-//    }
-//
-//
-//
-////    func getNFCProfilesAUX2(nfc: String, perfil: String) -> ProfileModel {
-////        let perArux: ProfileModel
-////
-////        let perfilRef = self.database.collection("users").document(nfc).collection("perfiles").whereField(perfil, arrayContainsAny: <#T##[Any]#>)
-////        perfilRef.getDocument(as: ProfileModel.self){ result in
-////              do {
-////                let perArux = try result.get()
-////              } catch {
-////                // Handle error
-////              }
-////            }
-////        return perArux
-////        }
-//
-//
 

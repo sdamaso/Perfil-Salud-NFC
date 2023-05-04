@@ -24,7 +24,7 @@ struct ProfileCreationView: View {
     @State private var changeImage = false
     
     
-    @State var profile: ProfileModel = ProfileModel(isFavorited: false, nombre: "", image: "", edad: "", telefono: "", direccion: "", peso: "", estatura: "", sexo: "Hombre", grupoAndRh: "A+", alergias: "", medicacion: "", enfermedades: "", tratamientos: "", antecedentes: "", vacunas: "", donanteOrg: false, cirugiasPrev: "", implantes: "", embarazos: 0, partos: 0, contactos: [:])
+    @State var profile: ProfileModel = ProfileModel(isFavorited: false, nombre: "", image: "", edad: "", telefono: "", direccion: "", peso: "", estatura: "", sexo: "Prefiero no decirlo", grupoAndRh: "A+", alergias: "", medicacion: "", enfermedades: "", tratamientos: "", antecedentes: "", vacunas: "", donanteOrg: false, cirugiasPrev: "", implantes: "", embarazos: 0, partos: 0, contactos: [:])
     
     var body: some View {
         NavigationView {
@@ -47,7 +47,6 @@ struct ProfileCreationView: View {
                                 .foregroundColor(Color("Color Logo"))
                             TextField("Nombre y apellidos", text: $profile.nombre)
                         }
-                        
                         DatePicker("Edad", selection: $edad, displayedComponents: .date)
                             .datePickerStyle(.automatic)
                             .foregroundColor(Color("Color Logo"))
@@ -104,7 +103,6 @@ struct ProfileCreationView: View {
                             Text("AB-").tag("AB-")
                             Text("O+").tag("O+")
                             Text("O-").tag("O-")
-                            
                         } label: {
                             Text("Grupo Sanguíneo")
                                 .foregroundColor(Color("Color Logo"))
@@ -203,7 +201,6 @@ struct ProfileCreationView: View {
                         if contactos < 3{
                             Button{
                                 contactos = contactos + 1
-                                print(contactos)
                             }label: {
                                 HStack{
                                     Image(systemName: "plus.circle.fill")
@@ -236,6 +233,7 @@ struct ProfileCreationView: View {
                         Text("Guardar")
                     }
                 }
+                
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button{
                         dismiss()
@@ -247,9 +245,7 @@ struct ProfileCreationView: View {
             .sheet(isPresented: $changeImage) {
                 PhotoPicker(profile: $profile)
             }
-            
         }
-        
     }
 }
 

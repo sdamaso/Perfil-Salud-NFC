@@ -18,7 +18,6 @@ struct ProfileView: View {
         NavigationView{
             List{
                 ForEach (profileViewModel.profiles) { profile in
-                    
                     NavigationLink{
                         ProfileDetailsView(profile: profile)
                             .navigationBarTitleDisplayMode(.inline)
@@ -27,11 +26,10 @@ struct ProfileView: View {
                                     ProfileEditingView(profileViewModel: profileViewModel, profile: profile)
                                 }
                             }
-                        
                     }label: {
                         ProfileEntry(profile: profile)
                     }
-                    .swipeActions(edge: .leading){
+                    .swipeActions(edge: .leading, allowsFullSwipe: true){
                         Button{
                             profileViewModel.delete(profile: profile)
                         }label: {
@@ -40,20 +38,18 @@ struct ProfileView: View {
                         }
                         .tint(Color.red)
                     }
-                    .swipeActions(edge: .trailing){
+                    .swipeActions(edge: .trailing, allowsFullSwipe: true){
                         Button{
                             profileViewModel.updateIsFavorited(profile: profile)
                         }label: {
                             Image(systemName: "star.fill")
-                            
                         }
                         .tint(Color.yellow)
                     }
                 }
             }
-            .task {
-                profileViewModel.getAllProfiles()
-            }
+            .task { profileViewModel.getAllProfiles() }
+            .onAppear(perform: {profileViewModel.getAllProfiles()})
             .toolbar{
                 ToolbarItem (placement: .navigationBarLeading){
                     Button{
@@ -72,17 +68,11 @@ struct ProfileView: View {
                 }
             }
             .navigationTitle("Perfiles")
-            
-            
             .sheet(isPresented: $addProfile){
-                //TODO: Create Profile View
                 ProfileCreationView(profileViewModel: profileViewModel)
-                
             }
         }
-        
     }
-    
 }
 
 

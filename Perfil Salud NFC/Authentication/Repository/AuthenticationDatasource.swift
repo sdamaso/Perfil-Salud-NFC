@@ -11,8 +11,6 @@ import FirebaseFirestore
 
 struct User {
     let email: String
-    //Nombre
-    
 }
 
 

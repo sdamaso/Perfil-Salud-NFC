@@ -29,7 +29,7 @@ struct PhotoPicker: UIViewControllerRepresentable{
     final class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate{
         
         let photoPicker: PhotoPicker
-        
+
         init(photoPicker: PhotoPicker){
             self.photoPicker = photoPicker
         }
@@ -54,9 +54,7 @@ struct PhotoPicker: UIViewControllerRepresentable{
                         photoPicker.profile.image = url?.absoluteString ?? ""
                     }
                 }
-            } else {
-                // Return error
-            }
+            } else { return }
             picker.dismiss(animated: true)
         }
     }

@@ -13,13 +13,11 @@ import FirebaseAuth
 struct ProfileModel: Decodable, Encodable, Identifiable, Hashable{
     @DocumentID var id: String?
     var isFavorited: Bool
-
     var nombre: String
     var image: String
     var edad: String
     var telefono: String
     var direccion: String
-
     var peso: String
     var estatura: String
     var sexo: String
@@ -35,7 +33,6 @@ struct ProfileModel: Decodable, Encodable, Identifiable, Hashable{
     var implantes: String
     var embarazos: Int
     var partos: Int
-
     var contactos: [String:String]
 }
 
@@ -90,5 +87,4 @@ final class ProfileDatasource{
         guard let uid = Auth.auth().currentUser?.uid else {return}
         database.collection(collectionUser).document(uid).collection(collectionProfile).document(documentId).delete()
     }
-    
 }

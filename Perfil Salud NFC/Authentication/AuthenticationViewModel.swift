@@ -50,6 +50,5 @@ final class AuthenticationViewModel: ObservableObject {
         } catch{
             print("Error logout")
         }
-        
     }
 }

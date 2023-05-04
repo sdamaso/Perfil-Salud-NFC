@@ -18,7 +18,6 @@ struct LaunchScreenView: View {
     private var image: some View{
         Image("Perfil Salud Icon V2.0")
             .resizable()
-//            .scaledToFit()
             .frame(width: 200, height: 200)
             .cornerRadius(25)
     }
@@ -34,7 +33,6 @@ struct LaunchScreenView: View {
     var body: some View {
         ZStack {
             backgroundColor
-            
             VStack {
                 image
                 Text("PERFIL SALUD")
@@ -42,7 +40,6 @@ struct LaunchScreenView: View {
                     .fontWeight(.heavy)
                     .foregroundColor(Color("Color Logo"))
             }
-            
         }
     }
 }

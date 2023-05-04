@@ -7,34 +7,15 @@
 
 import SwiftUI
 
-enum AuthSheetView: String, Identifiable{
-    case register
-    case login
-    
-    var id: String{
-        return rawValue
-    }
-}
-
-
-
 
 struct AuthenticationView: View {
     @ObservedObject var authenticationViewModel : AuthenticationViewModel
     @EnvironmentObject private var launchScreenState: LaunchScreenStateManager
-    @State private var authSheetView: AuthSheetView?
     
     @State var email=""
     @State var password=""
     @State var rePassword=""
     @State var createAccount=false
-    
-//    @ViewBuilder
-//    private var backgroundColor: some View{
-//        let gradient = Gradient(colors: [Color("Color Logo")])
-//        LinearGradient(gradient: gradient, startPoint: .topLeading, endPoint: .bottomTrailing)
-//            .ignoresSafeArea()
-//    }
     
     @ViewBuilder
     private var createAcc: some View{
@@ -48,7 +29,6 @@ struct AuthenticationView: View {
                 Text("PERFIL SALUD")
                     .font(.largeTitle)
                     .fontWeight(.heavy)
-                //                    .padding(.top,50)
                     .foregroundColor(Color("Color Logo"))
                 
                 Image("Perfil Salud Icon V2.0")
@@ -57,8 +37,8 @@ struct AuthenticationView: View {
                     .cornerRadius(18.75)
                     .padding(.top, 25)
             }
+            
             VStack {
-                
                 TextField("Correo Electrónico", text: $email)
                     .keyboardType(.emailAddress)
                     .textInputAutocapitalization(.never)
@@ -76,6 +56,9 @@ struct AuthenticationView: View {
                 
                 Button {
                     authenticationViewModel.createNewUser(email: email, password: password)
+                    email = ""
+                    password = ""
+                    authenticationViewModel.error = ""
                 } label: {
                     Text("Crear cuenta")
                         .foregroundColor(.black)
@@ -99,12 +82,10 @@ struct AuthenticationView: View {
             Spacer()
         }
         .padding(.all)
-        
     }
     
     var body: some View {
         NavigationView {
-            
             VStack{
                 Group {
                     Text("PERFIL SALUD")
@@ -120,7 +101,6 @@ struct AuthenticationView: View {
                         .padding(.top, 25)
                 }
                 VStack {
-                    
                     TextField("Correo Electrónico", text: $email)
                         .keyboardType(.emailAddress)
                         .textInputAutocapitalization(.never)
@@ -128,7 +108,6 @@ struct AuthenticationView: View {
                         .foregroundColor(.white)
                         .background(.white.opacity(0.1))
                         .cornerRadius(15)
-                    
                     
                     SecureField("Contraseña", text: $password)
                         .textInputAutocapitalization(.none)
@@ -162,17 +141,6 @@ struct AuthenticationView: View {
                 }
                 .padding(.top, 50)
                 
-                
-//                Button {
-//                    //TODO: RESETEAR CONTRASEÑA
-//                } label: {
-//                    Text("¿Ha olvidado su contraseña?")
-//                        .foregroundColor(Color("Color Logo"))
-//                        .underline()
-//
-//                }
-//                .padding(.top, 5)
-                
                 Spacer()
                 
                 HStack {
@@ -184,23 +152,21 @@ struct AuthenticationView: View {
                         Text("Crea tu cuenta")
                             .foregroundColor(Color("Color Logo"))
                             .underline()
-                        
                     }
                 }
             }
             .padding(.all)
-            
         }
         .task {
             try? await Task.sleep(for: Duration.seconds(3))
             self.launchScreenState.dismiss()
         }
         .sheet(isPresented: $createAccount) {
-            //TODO:
             createAcc
         }
     }
 }
+
 struct AuthenticationView_Previews: PreviewProvider {
     static var previews: some View {
         AuthenticationView(authenticationViewModel: AuthenticationViewModel())
